@@ -57,3 +57,17 @@ exe "set runtimepath+=".g:vim_dir
 exe "set runtimepath+=".g:vim_dir."/after"
 exe "set packpath+=".g:vim_dir
 exe "set packpath+=".g:vim_dir."/after"
+
+" sourcing config.vim
+
+let s:config = g:vim_dir . "/config.vim"
+if filereadable(s:config)
+  execute 'source ' . s:config
+endif
+
+" sourcing config.local.vim if it exists
+
+let s:config_local = g:vim_dir . "/config.local.vim"
+if filereadable(s:config_local)
+  execute 'source ' . s:config_local
+endif
