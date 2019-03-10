@@ -4,3 +4,6 @@
 [submodule "pack/bundle/start/dbext.vim"]
 	path = pack/bundle/start/dbext.vim
 	url = https://github.com/lbrayner/dbext.vim
+[submodule "pack/bundle/start/vim-obsession"]
+	path = pack/bundle/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
