@@ -7,7 +7,7 @@ if !&insertmode || !has("gui_running")
 endif
 
 function! s:SQL_SelectParagraph()
-    exe "normal! vip:call dbext#DB_execSql(DB_getVisualBlock())\<cr>"
+    exe "normal! vip:\<c-u>call dbext#DB_execSql(DB_getVisualBlock())\<cr>"
 endfunction
 
 imap <silent> <c-kMinus> <c-o>:res-5<cr>
