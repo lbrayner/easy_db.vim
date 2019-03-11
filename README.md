@@ -38,6 +38,7 @@ If you're setting this up for someone else, don't forget to use tpope's
 They are provided by the package `easy_dbext.vim`:
 
 - `CTRL-Enter`: execute SQL in paragraph.
+- `F1`: show these mappings.
 - `F5`: refresh the file (`:e`) to reload the *dbext* modelines.
 - `F9`: execute *DBResultsOpen* if in a buffer other than **Result**; toggle its
   size (*tall* or *short*) when in it.
@@ -45,3 +46,7 @@ They are provided by the package `easy_dbext.vim`:
 - `CTRL-NumpadMinus`: resize the window with -5 as parameter.
 - `CTRL-NumpadPlus`: resize the window with +5 as parameter.
 - `CTRL-F9`: equalize all windows.
+
+# Helptags
+
+Don't forget to `:helptags ALL`. Ignore the errors.
