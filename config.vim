@@ -10,3 +10,8 @@ if !has("nvim")
     endif
     let &dir=s:swap_dir."//"
 endif
+
+" ruler & statusline
+
+set noruler
+set statusline=%<%f\ %m%=\ %{&ft}\ %h%r\ %{&fileformat}\ %-14.(%l,%c%V%)\ %P
