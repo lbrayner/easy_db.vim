@@ -10,6 +10,6 @@ function! DBextPostResult(...)
             normal! 2j
         endif
     endif
-    set nomodifiable
-    set nomodified
+    setlocal nomodifiable
+    setlocal nomodified
 endfunction
