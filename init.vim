@@ -55,8 +55,10 @@ endif
 let g:vim_dir = expand('<sfile>:p:h')
 exe "set runtimepath+=".g:vim_dir
 exe "set runtimepath+=".g:vim_dir."/after"
-exe "set packpath+=".g:vim_dir
-exe "set packpath+=".g:vim_dir."/after"
+if has('packages')
+    exe "set packpath+=".g:vim_dir
+    exe "set packpath+=".g:vim_dir."/after"
+endif
 
 " sourcing config.vim
 
