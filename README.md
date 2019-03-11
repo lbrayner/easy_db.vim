@@ -1,3 +1,9 @@
+# Requirements
+
+It requires Vim 8.0 or greater (*+packages*).
+
+# Packages
+
 It comes with a few plugins bundled. To wit:
 
 - `dbext.vim`
@@ -15,8 +21,8 @@ easy_dbext_bundle.vim$ git submodule update --init
 # How to start it
 
 Use `init.vim` as *vimrc* with the `-u` flag: it will make this repository the
-effective *.vim* folder, removing the standard locations from the RUNTIMEPATH.
-It's meant to be used with gVim Easy, so:
+effective *.vim* folder, removing the standard locations from the *RUNTIMEPATH*.
+It's meant to be used with **gVim Easy**, so:
 
 ```
 easy_dbext_bundle.vim$ gvim -y -u init.vim
