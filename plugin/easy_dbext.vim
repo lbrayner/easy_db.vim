@@ -10,6 +10,10 @@ function! s:SQL_SelectParagraph()
     exe "normal! vip:\<c-u>call dbext#DB_execSql(DB_getVisualBlock())\<cr>"
 endfunction
 
+imap <f1> <c-o>:vert h easy_dbext_bundle.txt<cr>
+
+imap <silent> <f5> <c-o>:e<cr>
+
 imap <silent> <c-kMinus> <c-o>:res-5<cr>
 imap <silent> <c-kPlus> <c-o>:res+5<cr>
 
