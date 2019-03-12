@@ -7,7 +7,9 @@ if !&insertmode || !has("gui_running")
 endif
 
 function! s:SQL_SelectParagraph()
+    let winview = winsaveview()
     exe "normal! vip:\<c-u>call dbext#DB_execSql(DB_getVisualBlock())\<cr>"
+    call winrestview(winview)
 endfunction
 
 imap <f1> <c-o>:vert h easy_dbext_bundle.txt<cr>
