@@ -6,10 +6,34 @@ if !&insertmode || !has("gui_running")
     finish
 endif
 
-function! s:SQL_SelectParagraph()
+function! s:PreserveViewPort(command)
     let winview = winsaveview()
-    exe "normal! vip:\<c-u>call dbext#DB_execSql(DB_getVisualBlock())\<cr>"
+    if type(a:command) == type(function("tr"))
+        call a:command()
+    else
+        exe command
+    endif
     call winrestview(winview)
+endfunction
+
+" Select paragraph
+
+function! s:Do_SQL_SelectParagraph()
+    exe "normal! vip:\<c-u>call dbext#DB_execSql(DB_getVisualBlock())\<cr>"
+endfunction
+
+function! s:SQL_SelectParagraph()
+    call s:PreserveViewPort(funcref("<SID>Do_SQL_SelectParagraph"))
+endfunction
+
+" Describe table
+
+function! s:Do_SQL_DescribeTable()
+    exe "normal! :\<c-u>call dbext#DB_describeTable()\<cr>"
+endfunction
+
+function! s:SQL_DescribeTable()
+    call s:PreserveViewPort(funcref("<SID>Do_SQL_DescribeTable"))
 endfunction
 
 imap <f1> <c-o>:vert h easy_dbext_bundle.txt<cr>
@@ -21,6 +45,7 @@ imap <silent> <c-kPlus> <c-o>:res+5<cr>
 
 imap <silent> <f5> <c-o>:e<cr>
 imap <silent> <c-return> <c-o>:call <SID>SQL_SelectParagraph()<cr>
+imap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
 
 let s:toggle_window_size = 0
 let s:result_window_small_size = 10
