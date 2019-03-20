@@ -37,8 +37,9 @@ If you're setting this up for someone else, don't forget to use tpope's
 
 They are provided by the package `easy_dbext.vim`:
 
-- `CTRL-Enter`: execute SQL in paragraph.
-- `F1`: show these mappings.
+- `CTRL-Enter`: execute SQL (SQL, DML or DDL) in paragraph.
+- `SHIFT-Enter`: describe table under cursor.
+- `F1`: show these (and more) mappings.
 - `F5`: refresh the file (`:e`) to reload the *dbext* modelines.
 - `F9`: execute *DBResultsOpen* if in a buffer other than **Result**; toggle its
   size (*tall* or *short*) when in it.
