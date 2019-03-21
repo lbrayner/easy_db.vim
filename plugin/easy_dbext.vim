@@ -36,7 +36,7 @@ function! s:SQL_DescribeTable()
     call s:PreserveViewPort(funcref("<SID>Do_SQL_DescribeTable"))
 endfunction
 
-imap <f1> <c-o>:vert h easy_dbext_bundle.txt<cr>
+imap <f1> <c-o>:h easy_dbext_bundle.txt<cr>
 
 imap <silent> <f5> <c-o>:e<cr>
 
