@@ -25,4 +25,4 @@ endif
 " ruler & statusline
 
 set noruler
-set statusline=%<%f\ %m%=\ %{&ft}\ %h%r\ %{&fileformat}\ %-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %-14.(%l,%c%V%)\ %P
