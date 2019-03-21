@@ -36,17 +36,6 @@ function! s:SQL_DescribeTable()
     call s:PreserveViewPort(funcref("<SID>Do_SQL_DescribeTable"))
 endfunction
 
-imap <f1> <c-o>:h easy_dbext_bundle.txt<cr>
-
-imap <silent> <f5> <c-o>:e<cr>
-
-imap <silent> <c-kMinus> <c-o>:res-5<cr>
-imap <silent> <c-kPlus> <c-o>:res+5<cr>
-
-imap <silent> <f5> <c-o>:e<cr>
-imap <silent> <c-return> <c-o>:call <SID>SQL_SelectParagraph()<cr>
-imap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
-
 let s:toggle_window_size = 0
 let s:result_window_small_size = 10
 
@@ -71,6 +60,16 @@ function! s:ToggleSizeOrOpenResults()
     let s:toggle_window_size = (s:toggle_window_size+1)%2
 endfunction
 
-imap <silent> <c-f9> <c-o><c-w>=
-imap <silent> <f9> <c-o>:call <SID>ToggleSizeOrOpenResults()<cr>
-imap <silent> <f10> <c-o>:DBResultsClose<cr>
+" Mappings
+
+inoremap <f1> <c-o>:h easy_dbext_bundle.txt<cr>
+
+inoremap <silent> <c-kMinus> <c-o>:res-5<cr>
+inoremap <silent> <c-kPlus> <c-o>:res+5<cr>
+
+inoremap <silent> <c-return> <c-o>:call <SID>SQL_SelectParagraph()<cr>
+inoremap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
+
+inoremap <silent> <c-f9> <c-o><c-w>=
+inoremap <silent> <f9> <c-o>:call <SID>ToggleSizeOrOpenResults()<cr>
+inoremap <silent> <f10> <c-o>:DBResultsClose<cr>
