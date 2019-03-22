@@ -6,6 +6,24 @@ if !&insertmode || !has("gui_running")
     finish
 endif
 
+" If you define a function, DBextPostResult, in your .vimrc (or elsewhere)
+" it will be called automatically each time the Result buffer is updated.
+function! DBextPostResult(db_type, buf_nr)
+    " removing an undesirable mapping
+    nunmap <buffer> q
+    if a:db_type ==# "MYSQL"
+        if b:dbext_extra =~# "vvv"
+            syn region ResultFold start="^--------------$" end="^--------------$"
+                        \ keepend transparent fold
+            syn sync fromstart
+            setlocal foldmethod=syntax
+            normal! 2j
+        endif
+    endif
+    setlocal nomodifiable
+    setlocal nomodified
+endfunction
+
 function! s:PreserveViewPort(command)
     let winview = winsaveview()
     if type(a:command) == type(function("tr"))
@@ -35,6 +53,8 @@ endfunction
 function! s:SQL_DescribeTable()
     call s:PreserveViewPort(funcref("<SID>Do_SQL_DescribeTable"))
 endfunction
+
+" ToggleSizeOrOpenResults
 
 let s:toggle_window_size = 0
 let s:result_window_small_size = 10
