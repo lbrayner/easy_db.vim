@@ -9,8 +9,6 @@ endif
 " If you define a function, DBextPostResult, in your .vimrc (or elsewhere)
 " it will be called automatically each time the Result buffer is updated.
 function! DBextPostResult(db_type, buf_nr)
-    " removing an undesirable mapping
-    nunmap <buffer> q
     if a:db_type ==# "MYSQL"
         if b:dbext_extra =~# "vvv"
             syn region ResultFold start="^--------------$" end="^--------------$"
