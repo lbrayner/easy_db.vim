@@ -6,6 +6,10 @@ if !&insertmode || !has("gui_running")
     finish
 endif
 
+" highlight groups
+
+highlight TrailingSpaces guibg=#ff0000
+
 " If you define a function, DBextPostResult, in your .vimrc (or elsewhere)
 " it will be called automatically each time the Result buffer is updated.
 function! DBextPostResult(db_type, buf_nr)
