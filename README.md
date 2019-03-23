@@ -46,6 +46,8 @@ They are provided by the package `easy_dbext.vim`:
 - `F1`: show these (and more) mappings.
 - `F5`: refresh the file (`:e`) to reload the *dbext* modelines (SQL buffers
   only).
+- `F8`: toggle *wrap* (when on, lines longer than the width of the window will
+  wrap and displaying continues on the next line).
 - `F9`: execute *DBResultsOpen* if in a buffer other than **Result**; toggle its
   size (*tall* or *short*) when in it.
 - `F10`: execute *DBResultsClose*.
