@@ -26,7 +26,7 @@ endfunction
 
 augroup VimEnterAutoGroup
     au!
-    au VimEnter * call s:BufWipeForce('\<Result\>')
+    au VimEnter * call s:BufWipeForce('^Result$')
     au VimEnter * call s:BufWipeFileTypeForce("help")
 augroup END
 
