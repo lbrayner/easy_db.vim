@@ -1,4 +1,8 @@
+set enc=utf-8
+set listchars=eol:¬,tab:»\ ,trail:·
 set modeline
+"show existing tab with 4 spaces width
+set tabstop=4
 
 " setting dir
 
@@ -32,3 +36,7 @@ set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %-14.(%l,%c%V%)\ %P
 " emacs c-k behaviour
 inoremap <c-k> <c-o>D
 cnoremap <c-k> <c-f>D<c-c><c-c>:<up>
+
+" Toggle insertmode
+inoremap <s-f3> <c-o>:set noinsertmode<cr>:set insertmode?<cr>
+nnoremap <c-f3> <c-o>:set insertmode<cr>
