@@ -33,6 +33,10 @@ Make a script of it or a Windows shortcut.
 If you're setting this up for someone else, don't forget to use tpope's
 [vim-obsession](https://github.com/tpope/vim-obsession.git).
 
+# Helptags
+
+Don't forget to `:helptags ALL`. Ignore the errors.
+
 # Mappings (Insert Mode)
 
 They are provided by the package `easy_dbext.vim`:
@@ -40,14 +44,50 @@ They are provided by the package `easy_dbext.vim`:
 - `CTRL-Enter`: execute SQL (SQL, DML or DDL) in paragraph.
 - `SHIFT-Enter`: describe table under cursor.
 - `F1`: show these (and more) mappings.
-- `F5`: refresh the file (`:e`) to reload the *dbext* modelines.
+- `F5`: refresh the file (`:e`) to reload the *dbext* modelines (SQL buffers
+  only).
 - `F9`: execute *DBResultsOpen* if in a buffer other than **Result**; toggle its
   size (*tall* or *short*) when in it.
 - `F10`: execute *DBResultsClose*.
 - `CTRL-NumpadMinus`: resize the window with -5 as parameter.
 - `CTRL-NumpadPlus`: resize the window with +5 as parameter.
 - `CTRL-F9`: equalize all windows.
+- `ESC ESC`: close all windows except the current one (SQL buffers only).
+ 
+# Maintainer's mappings
 
-# Helptags
+Insert mode:
 
-Don't forget to `:helptags ALL`. Ignore the errors.
+- `SHIFT-F3`: *set noinsertmode*, effectively disabling Easy Mode so that the
+  maintainer may expect normal Vim behavior.
+- `F12`: toggle *list* to, for example, differentiate between tabs and spaces.
+
+Normal mode:
+
+- `CTRL-F3`: *set insertmode* to re-enable Easy Mode.
+- `F12`: same as above.
+
+# Other mappings
+
+Insert mode:
+
+- `CTRL-K`: behave like Emacs' *C-K*, i.e., kill-line (erase everything until the
+  end of the line).
+
+Command-line mode:
+
+- `CTRL-K`: same as above.
+
+# Local configuration
+
+Local packages can be installed in `pack/local`; and local configuration should
+reside in `config.local.vim` (both inside the *easy_dbext_bundle.vim*
+directory). For example, suppose you want to install the
+[gruvbox](https://github.com/morhetz/gruvbox) colorscheme:
+
+```
+easy_dbext_bundle.vim$ git clone 'https://github.com/morhetz/gruvbox' pack/local/start/gruvbox
+```
+
+Then create `config.local.vim` inside *easy_dbext_bundle.vim* and add
+`colorscheme gruvbox` to it.
