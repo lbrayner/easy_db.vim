@@ -26,3 +26,9 @@ endif
 
 set noruler
 set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %-14.(%l,%c%V%)\ %P
+
+" Mappings
+
+" emacs c-k behaviour
+inoremap <c-k> <c-o>D
+cnoremap <c-k> <c-f>D<c-c><c-c>:<up>
