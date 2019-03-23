@@ -92,6 +92,7 @@ inoremap <silent> <c-kPlus> <c-o>:res+5<cr>
 inoremap <silent> <c-return> <c-o>:call <SID>SQL_SelectParagraph()<cr>
 inoremap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
 
+inoremap <f8> <c-o>:setlocal wrap! wrap?<CR>
 inoremap <silent> <c-f9> <c-o><c-w>=
 inoremap <silent> <f9> <c-o>:call <SID>ToggleSizeOrOpenResults()<cr>
 inoremap <silent> <f10> <c-o>:DBResultsClose<cr>
