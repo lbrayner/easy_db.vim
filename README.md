@@ -1,6 +1,6 @@
 # Requirements
 
-It requires Vim 8.0 or greater (*+packages*).
+It requires gVim 8.0 or greater (*+packages*).
 
 # Packages
 
