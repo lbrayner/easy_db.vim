@@ -38,8 +38,8 @@ inoremap <c-k> <c-o>D
 cnoremap <c-k> <c-f>D<c-c><c-c>:<up>
 
 " Toggle insertmode
-inoremap <s-f3> <c-o>:set noinsertmode<cr>:set insertmode?<cr>
-nnoremap <c-f3> <c-o>:set insertmode<cr>
+inoremap <s-f3> <c-o>:set noinsertmode insertmode?<cr>
+nnoremap <c-f3> :set insertmode<cr>
 
 " list
 inoremap <silent> <F12>  <c-o>:setlocal list!<CR>
