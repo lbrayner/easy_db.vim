@@ -73,3 +73,14 @@ let s:config_local = g:vim_dir . "/config.local.vim"
 if filereadable(s:config_local)
   execute 'source ' . s:config_local
 endif
+
+" sourcing ginit.vim if it exists
+
+if has("gui_running")
+    if $MYGVIMRC == ''
+        let s:ginit = g:vim_dir . "/ginit.vim"
+        if filereadable(s:ginit)
+          execute 'source ' . s:ginit
+        endif
+    endif
+endif
