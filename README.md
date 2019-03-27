@@ -7,6 +7,7 @@ It requires gVim 8.0 or greater (*+packages*).
 It comes with a few plugins bundled. To wit:
 
 - `dbext.vim`
+- `delimitMate`
 - `vim-obsession`
 - `vim-sensible`
 

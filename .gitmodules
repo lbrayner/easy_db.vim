@@ -10,3 +10,6 @@
 [submodule "pack/bundle/start/vim-sensible"]
 	path = pack/bundle/start/vim-sensible
 	url = https://github.com/tpope/vim-sensible
+[submodule "pack/bundle/start/delimitMate"]
+	path = pack/bundle/start/delimitMate
+	url = https://github.com/Raimondi/delimitMate
