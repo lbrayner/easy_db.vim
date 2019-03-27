@@ -6,10 +6,15 @@ It requires gVim 8.0 or greater (*+packages*).
 
 It comes with a few plugins bundled. To wit:
 
-- `dbext.vim`
-- `delimitMate`
-- `vim-obsession`
-- `vim-sensible`
+- [dbext.vim](https://github.com/lbrayner/easy_dbext.vim)
+- [delimitMate](https://github.com/Raimondi/delimitMate)
+- [vim-obsession](https://github.com/tpope/vim-obsession.git)
+- [vim-sensible](https://github.com/tpope/vim-sensible)
+
+The only one that changes the behavior of the editor is
+[delimitMate](https://github.com/Raimondi/delimitMate): it *...provides automatic
+closing of quotes, parenthesis, brackets, etc., besides some other related
+features that should make your time in insert mode a little bit easier...*
 
 # Installation
 
