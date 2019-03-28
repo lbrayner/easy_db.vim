@@ -61,7 +61,7 @@ They are provided by the package `easy_dbext.vim`:
 - `CTRL-NumpadPlus`: resize the window with +5 as parameter.
 - `CTRL-F9`: equalize all windows.
 - `ESC ESC`: close all windows except the current one (SQL buffers only).
- 
+
 # Maintainer's mappings
 
 Insert mode:
