@@ -1,0 +1,68 @@
+*easy_dbext_bundle.txt*
+
+<F1>		Close this window.
+
+(It's actually an |Insert-mode| mapping for |help| buffers.)
+
+Global bindings:
+
+						*i_<C-RETURN>*
+<C-RETURN>	Execute command (SQL, DML, DDL etc.) in |paragraph|. 
+						*i_<S-RETURN>*
+<S-RETURN>	Describe table under the cursor.
+						*i_<C-F9>*
+<C-F9>		Equalize all windows (|CTRL-W_=|).
+
+						*i_<F8>*
+<F8>		Toggle |'wrap'|: when on, lines longer than the width of the
+		window will wrap and displaying continues on the next line.
+						*i_<F9>*
+<F9>		Execute DBResultsOpen (|dbext.vim|) if in a buffer other than Result; toggle
+                its size (tall or short) when in it.
+						*i_<F10>*
+<F10>		Execute DBResultsClose (|dbext.vim|).
+
+						*i_<C-kMinus>*
+<C-kMinus>	|resize| the window with -5 as parameter.
+						*i_<C-kPlus>*
+<C-kPlus>	|resize| the window with +5 as parameter.
+
+Bingings exclusive to SQL buffers (|sql.vim|):
+
+Esc Esc		- Make the current window the only one on the screen (|:only|).
+F5		- Refresh (|:e| re-edit) the current file.
+
+Easy mode also sources |$VIMRUNTIME|/mswin.vim, which, among others, provides
+the following binding:
+
+CTRL-S		Saves the file.
+
+What follows are default mappings for easy mode.
+
+From |starting.txt|:
+
+EVim runs Vim as click-and-type editor.  This is very unlike the original Vi
+idea.  But it helps for people that don't use Vim often enough to learn the
+commands.  Hopefully they will find out that learning to use Normal mode
+commands will make their editing much more effective.
+
+Key mappings:
+	<Down>		moves by screen lines rather than file lines
+	<Up>		idem
+	Q		does "gq", formatting, instead of Ex mode
+	<BS>		in Visual mode: deletes the selection
+	CTRL-X		in Visual mode: Cut to clipboard
+	<S-Del>		idem
+	CTRL-C		in Visual mode: Copy to clipboard
+	<C-Insert>	idem
+	CTRL-V		Pastes from the clipboard (in any mode)
+	<S-Insert>	idem
+	CTRL-Q		do what CTRL-V used to do
+	CTRL-Z		undo
+	CTRL-Y		redo
+	<M-Space>	system menu
+	CTRL-A		select all
+	<C-Tab>		next window, CTRL-W w
+	<C-F4>		close window, CTRL-W c
+
+ vim:tw=78:ts=8:ft=help:norl:

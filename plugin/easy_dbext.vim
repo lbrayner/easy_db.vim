@@ -84,8 +84,6 @@ endfunction
 
 " Mappings
 
-inoremap <f1> <c-o>:h easy_dbext_bundle.txt<cr>
-
 inoremap <silent> <c-kMinus> <c-o>:res-5<cr>
 inoremap <silent> <c-kPlus> <c-o>:res+5<cr>
 
