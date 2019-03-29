@@ -84,3 +84,12 @@ if has("gui_running")
         endif
     endif
 endif
+
+" sourcing ginit.local.vim if it exists
+
+if has("gui_running")
+    let s:ginit_local = g:vim_dir . "/ginit.local.vim"
+    if filereadable(s:ginit_local)
+      execute 'source ' . s:ginit_local
+    endif
+endif
