@@ -10,6 +10,11 @@ endif
 
 highlight TrailingSpaces guibg=#ff0000
 
+" dbext
+
+" - Whether to use separate result buffers for each file
+let g:dbext_default_use_sep_result_buffer = 1
+
 " If you define a function, DBextPostResult, in your .vimrc (or elsewhere)
 " it will be called automatically each time the Result buffer is updated.
 function! DBextPostResult(db_type, buf_nr)
@@ -63,11 +68,7 @@ let s:result_window_small_size = 10
 
 function! s:ToggleSizeOrOpenResults()
     let last_winnr = winnr()
-    call dbext#DB_windowOpen()
-
-    " dbext code sets modified
-    setlocal nomodifiable
-    setlocal nomodified
+    call dbext#DB_openResults()
 
     let current_winnr = winnr()
     if last_winnr != current_winnr
