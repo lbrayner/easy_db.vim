@@ -54,9 +54,9 @@ They are provided by the package `easy_dbext.vim`:
   only).
 - `F8`: toggle *wrap* (when on, lines longer than the width of the window will
   wrap and displaying continues on the next line).
-- `F9`: execute *DBResultsOpen* if in a buffer other than **Result**; toggle its
+- `F9`: open the **Result** if in a buffer other than it; toggle its
   size (*tall* or *short*) when in it.
-- `F10`: execute *DBResultsClose*.
+- `F10`: close the **Result** buffer.
 - `CTRL-NumpadMinus`: resize the window with -5 as parameter.
 - `CTRL-NumpadPlus`: resize the window with +5 as parameter.
 - `CTRL-F9`: equalize all windows.
