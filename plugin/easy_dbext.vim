@@ -70,6 +70,10 @@ function! s:ToggleSizeOrOpenResults()
     let last_winnr = winnr()
     call dbext#DB_openResults()
 
+    " dbext code sets modified
+    setlocal nomodifiable
+    setlocal nomodified
+
     let current_winnr = winnr()
     if last_winnr != current_winnr
         return
@@ -83,6 +87,13 @@ function! s:ToggleSizeOrOpenResults()
     let s:toggle_window_size = (s:toggle_window_size+1)%2
 endfunction
 
+function! s:ResultsClose()
+    if dbext#DB_isResultBufferVisible()
+        call dbext#DB_openResults()
+        quit
+    endif
+endfunction
+
 " Mappings
 
 inoremap <silent> <c-kMinus> <c-o>:res-5<cr>
@@ -94,4 +105,4 @@ inoremap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
 inoremap <f8> <c-o>:setlocal wrap! wrap?<CR>
 inoremap <silent> <c-f9> <c-o><c-w>=
 inoremap <silent> <f9> <c-o>:call <SID>ToggleSizeOrOpenResults()<cr>
-inoremap <silent> <f10> <c-o>:DBResultsClose<cr>
+inoremap <silent> <f10> <c-o>:call <SID>ResultsClose()<cr>
