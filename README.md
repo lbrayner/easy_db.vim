@@ -93,6 +93,8 @@ reside in `config.local.vim` (both inside the *easy_dbext_bundle.vim*
 directory). For example, suppose you want to install the
 [gruvbox](https://github.com/morhetz/gruvbox) colorscheme:
 
+GUI local configuration should reside in `ginit.local.vim`.
+
 ```
 easy_dbext_bundle.vim$ git clone 'https://github.com/morhetz/gruvbox' pack/local/start/gruvbox
 ```
