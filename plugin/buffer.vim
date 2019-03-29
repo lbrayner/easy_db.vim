@@ -12,8 +12,8 @@ function! s:LoopBuffers(predicate,command)
     return buffer_count
 endfunction
 
-function! s:BufWipeForce(wipe_pattern)
-    call s:LoopBuffers('buflisted(n) && bufname(n) =~# '
+function! s:BufWipeNotReadableForce(wipe_pattern)
+    call s:LoopBuffers('buflisted(n) && !filereadable(bufname(n)) && bufname(n) =~# '
                         \ . "'" . a:wipe_pattern . "'",'bwipe!')
 endfunction
 
@@ -26,7 +26,7 @@ endfunction
 
 augroup VimEnterAutoGroup
     au!
-    au VimEnter * call s:BufWipeForce('^Result$')
+    au VimEnter * call s:BufWipeNotReadableForce('^Result')
     au VimEnter * call s:BufWipeFileTypeForce("help")
 augroup END
 
