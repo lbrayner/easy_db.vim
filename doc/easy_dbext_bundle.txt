@@ -1,20 +1,20 @@
 *easy_dbext_bundle.txt*
 
-<F1>		Close this window.
+<F1>		Closes this window.
 
 (It's actually an |Insert-mode| mapping for |help| buffers.)
 
 Global bindings:
 
 						*i_<C-RETURN>*
-<C-RETURN>	Execute command (SQL, DML, DDL etc.) in |paragraph|. 
+<C-RETURN>	Executes command (SQL, DML, DDL etc.) in |paragraph|. 
 						*i_<S-RETURN>*
-<S-RETURN>	Describe table under the cursor.
+<S-RETURN>	Describes table under the cursor.
 						*i_<C-F9>*
-<C-F9>		Equalize all windows (|CTRL-W_=|).
+<C-F9>		Equalizes all windows (|CTRL-W_=|).
 
 						*i_<F8>*
-<F8>		Toggle |'wrap'|: when on, lines longer than the width of the
+<F8>		Toggles |'wrap'|: when on, lines longer than the width of the
 		window will wrap and displaying continues on the next line.
 						*i_<F9>*
 <F9>		Opens the Result buffer if in a buffer other than it; toggle
@@ -29,8 +29,8 @@ Global bindings:
 
 Bingings exclusive to SQL buffers (|sql.vim|):
 
-Esc Esc		- Make the current window the only one on the screen (|:only|).
-F5		- Refresh (|:e| re-edit) the current file.
+Esc Esc		- Makes the current window the only one on the screen (|:only|).
+F5		- Refreshes (|:e| re-edit) the current file.
 
 Easy mode also sources |$VIMRUNTIME|/mswin.vim, which, among others, provides
 the following binding:
