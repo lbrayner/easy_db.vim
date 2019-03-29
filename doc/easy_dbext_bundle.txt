@@ -17,10 +17,10 @@ Global bindings:
 <F8>		Toggle |'wrap'|: when on, lines longer than the width of the
 		window will wrap and displaying continues on the next line.
 						*i_<F9>*
-<F9>		Execute DBResultsOpen (|dbext.vim|) if in a buffer other than Result; toggle
+<F9>		Opens the Result buffer if in a buffer other than it; toggle
                 its size (tall or short) when in it.
 						*i_<F10>*
-<F10>		Execute DBResultsClose (|dbext.vim|).
+<F10>		Closes the Result buffer.
 
 						*i_<C-kMinus>*
 <C-kMinus>	|resize| the window with -5 as parameter.
