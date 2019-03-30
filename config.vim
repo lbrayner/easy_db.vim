@@ -44,3 +44,8 @@ nnoremap <c-f3> :set insertmode<cr>
 " list
 inoremap <silent> <F12>  <c-o>:setlocal list!<CR>
 nnoremap <silent> <F12>  :setlocal list!<CR>
+
+" vim-commentary
+
+inoremap <silent> <M-/> <c-o>:Commentary<cr>
+snoremap <silent> <M-/> <c-o>:Commentary<cr>
