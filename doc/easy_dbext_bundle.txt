@@ -27,7 +27,7 @@ Global bindings:
 						*i_<C-kPlus>*
 <C-kPlus>	|resize| the window with +5 as parameter.
 
-Bingings exclusive to SQL buffers (|sql.vim|):
+Bindings exclusive to SQL buffers (|sql.vim|):
 
 Esc Esc		- Makes the current window the only one on the screen (|:only|).
 F5		- Refreshes (|:e| re-edit) the current file.
