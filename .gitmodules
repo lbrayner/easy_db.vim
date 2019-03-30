@@ -13,3 +13,6 @@
 [submodule "pack/bundle/start/delimitMate"]
 	path = pack/bundle/start/delimitMate
 	url = https://github.com/Raimondi/delimitMate
+[submodule "pack/bundle/start/vim-commentary"]
+	path = pack/bundle/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
