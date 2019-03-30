@@ -27,6 +27,7 @@ function! DBextPostResult(db_type, buf_nr)
             normal! 2j
         endif
     endif
+    setlocal readonly
     setlocal nomodifiable
     setlocal nomodified
 endfunction
@@ -71,6 +72,7 @@ function! s:ToggleSizeOrOpenResults()
     call dbext#DB_openResults()
 
     " dbext code sets modified
+    setlocal readonly
     setlocal nomodifiable
     setlocal nomodified
 
