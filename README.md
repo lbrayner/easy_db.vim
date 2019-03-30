@@ -8,6 +8,7 @@ It comes with a few plugins bundled. To wit:
 
 - [dbext.vim](https://github.com/lbrayner/easy_dbext.vim)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
+- [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 
@@ -45,7 +46,7 @@ Don't forget to `:helptags ALL`. Ignore the errors.
 
 # Mappings (Insert Mode)
 
-They are provided by the package `easy_dbext.vim`:
+Most are provided by the package `easy_dbext.vim`:
 
 - `CTRL-Enter`: execute SQL (SQL, DML or DDL) in paragraph.
 - `SHIFT-Enter`: describe table under cursor.
@@ -61,6 +62,10 @@ They are provided by the package `easy_dbext.vim`:
 - `CTRL-NumpadPlus`: resize the window with +5 as parameter.
 - `CTRL-F9`: equalize all windows.
 - `ESC ESC`: close all windows except the current one (SQL buffers only).
+
+These facilitate other plugins' functionalities:
+
+- `ALT-/`: toggle comment — it also works on selected text (*vim-commentary*).
 
 # Maintainer's mappings
 
@@ -91,7 +96,7 @@ Command-line mode:
 Local packages can be installed in `pack/local`; and local configuration should
 reside in `config.local.vim` (both inside the *easy_dbext_bundle.vim*
 directory). For example, suppose you want to install the
-[gruvbox](https://github.com/morhetz/gruvbox) colorscheme:
+[gruvbox](https://github.com/morhetz/gruvbox) color scheme:
 
 ```
 easy_dbext_bundle.vim$ git clone 'https://github.com/morhetz/gruvbox' pack/local/start/gruvbox
