@@ -9,3 +9,7 @@ inoremap <buffer> <silent> <f5> <c-o>:e<cr>
 
 autocmd BufEnter <buffer> match TrailingSpaces /^\s\+$/
 autocmd BufLeave <buffer> match
+
+" delimitMate
+
+let b:delimitMate_matchpairs = "(:),[:],{:}"
