@@ -1,3 +1,0 @@
-setlocal readonly
-setlocal nomodifiable
-setlocal nomodified
