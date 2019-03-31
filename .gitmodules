@@ -1,6 +1,3 @@
-[submodule "pack/bundle/start/easy_dbext.vim"]
-	path = pack/bundle/start/easy_dbext.vim
-	url = https://github.com/lbrayner/easy_dbext.vim
 [submodule "pack/bundle/start/dbext.vim"]
 	path = pack/bundle/start/dbext.vim
 	url = https://github.com/lbrayner/dbext.vim
