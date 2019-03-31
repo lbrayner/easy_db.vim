@@ -6,7 +6,7 @@ It requires gVim 8.0 or greater (*+packages*).
 
 It comes with a few plugins bundled. To wit:
 
-- [dbext.vim](https://github.com/lbrayner/easy_dbext.vim)
+- [dbext.vim](https://github.com/lbrayner/dbext.vim)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)
@@ -45,8 +45,6 @@ If you're setting this up for someone else, don't forget to use tpope's
 Don't forget to `:helptags ALL`. Ignore the errors.
 
 # Mappings (Insert Mode)
-
-Most are provided by the package `easy_dbext.vim`:
 
 - `CTRL-Enter`: execute SQL (SQL, DML or DDL) in paragraph.
 - `SHIFT-Enter`: describe table under cursor.
