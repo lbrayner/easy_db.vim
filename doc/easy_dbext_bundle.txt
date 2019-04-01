@@ -27,6 +27,9 @@ Global bindings:
 						*i_<C-kPlus>*
 <C-kPlus>	|resize| the window with +5 as parameter.
 
+						*i_<M-/>*
+<M-/>		Toggles source code line comments. Works with selections too.
+
 Bindings exclusive to SQL buffers (|sql.vim|):
 
 Esc Esc		- Makes the current window the only one on the screen (|:only|).
