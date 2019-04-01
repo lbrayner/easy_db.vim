@@ -18,6 +18,9 @@ let g:dbext_default_use_sep_result_buffer = 1
 " If you define a function, DBextPostResult, in your .vimrc (or elsewhere)
 " it will be called automatically each time the Result buffer is updated.
 function! DBextPostResult(db_type, buf_nr)
+    setlocal readonly
+    setlocal nomodifiable
+    setlocal nomodified
     if b:dbext_type ==# "PGSQL"
         if b:dbext_extra =~# "QUIET=off"
             syn region ResultFold start="\%2l" end="^SET$"
@@ -26,6 +29,7 @@ function! DBextPostResult(db_type, buf_nr)
             setlocal foldmethod=syntax
             normal! 2j
         endif
+        return
     endif
     if a:db_type ==# "MYSQL"
         if b:dbext_extra =~# "vvv"
@@ -35,10 +39,8 @@ function! DBextPostResult(db_type, buf_nr)
             setlocal foldmethod=syntax
             normal! 2j
         endif
+        return
     endif
-    setlocal readonly
-    setlocal nomodifiable
-    setlocal nomodified
 endfunction
 
 function! s:PreserveViewPort(command)
