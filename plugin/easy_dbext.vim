@@ -18,11 +18,18 @@ let g:dbext_default_use_sep_result_buffer = 1
 " If you define a function, DBextPostResult, in your .vimrc (or elsewhere)
 " it will be called automatically each time the Result buffer is updated.
 function! DBextPostResult(db_type, buf_nr)
+    " clearing buffer local mappings
+    mapclear <buffer>
+    inoremap <buffer> <silent> C <c-o>:call <SID>CloneResultBuffer()<cr>
     setlocal readonly
     setlocal nomodifiable
     setlocal nomodified
-    if b:dbext_type ==# "PGSQL"
-        if b:dbext_extra =~# "QUIET=off"
+    call s:ResultBufferSyntax(b:)
+endfunction
+
+function! s:ResultBufferSyntax(dbext_opts)
+    if a:dbext_opts['dbext_type'] ==# "PGSQL"
+        if a:dbext_opts['dbext_extra'] =~# "QUIET=off"
             syn region ResultFold start="\%2l" end="^SET$"
                         \ keepend transparent fold
             syn sync fromstart
@@ -31,8 +38,8 @@ function! DBextPostResult(db_type, buf_nr)
         endif
         return
     endif
-    if a:db_type ==# "MYSQL"
-        if b:dbext_extra =~# "vvv"
+    if a:dbext_opts['dbext_type'] ==# "MYSQL"
+        if a:dbext_opts['dbext_extra'] =~# "vvv"
             syn region ResultFold start="^--------------$" end="^--------------$"
                         \ keepend transparent fold
             syn sync fromstart
@@ -105,6 +112,40 @@ function! s:ResultsClose()
         call dbext#DB_openResults()
         quit
     endif
+endfunction
+
+function! s:Random()
+    if &sh =~# 'sh'
+        return system('echo $RANDOM')[:-2]
+    endif
+    if has("win32") || has("win64")
+        if &sh =~# 'cmd.exe'
+            return system('echo %RANDOM%')[:-2]
+        endif
+    endif
+    return -1
+endfunction
+
+function! s:CloneResultBuffer()
+    let dbext_opts = b:
+    let buf_nr = bufnr('%')
+    let buf_name = bufname('%')
+    silent! keepalt topleft 10 new
+    setlocal modifiable
+    setlocal noreadonly
+    exec "file ".buf_name."-".s:Random()
+    silent! put =getbufline(buf_nr,1,'$')
+    1d_
+    setlocal readonly
+    setlocal nomodified
+    setlocal nomodifiable
+    setlocal nowrap
+    setlocal nonumber
+    setlocal buftype=nofile
+    setlocal bufhidden=wipe
+    setlocal noswapfile
+    call s:ResultBufferSyntax(dbext_opts)
+    exec bufwinnr(buf_nr)."wincmd w"
 endfunction
 
 " Mappings
