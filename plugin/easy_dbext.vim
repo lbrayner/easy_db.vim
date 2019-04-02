@@ -21,6 +21,7 @@ function! DBextPostResult(db_type, buf_nr)
     " clearing buffer local mappings
     mapclear <buffer>
     inoremap <buffer> <silent> C <c-o>:call <SID>CloneResultBuffer()<cr>
+    inoremap <buffer> <f1> <c-o>:h easy_dbext_bundle.txt<cr>
     setlocal readonly
     setlocal nomodifiable
     setlocal nomodified

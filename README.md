@@ -48,7 +48,7 @@ Don't forget to `:helptags ALL`. Ignore the errors.
 
 - `CTRL-Enter`: execute SQL (SQL, DML or DDL) in paragraph.
 - `SHIFT-Enter`: describe table under cursor.
-- `F1`: show these (and more) mappings (SQL buffers only).
+- `F1`: show these (and more) mappings (SQL and Result buffers only).
 - `F5`: refresh the file (`:e`) to reload the *dbext* modelines (SQL buffers
   only).
 - `F8`: toggle *wrap* (when on, lines longer than the width of the window will
