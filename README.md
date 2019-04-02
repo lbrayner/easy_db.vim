@@ -61,6 +61,11 @@ Don't forget to `:helptags ALL`. Ignore the errors.
 - `CTRL-F9`: equalize all windows.
 - `ESC ESC`: close all windows except the current one (SQL buffers only).
 
+Result buffer mappings:
+
+- `C`: clone the buffer (displays the current results in a separate window at
+  the top).
+
 These facilitate other plugins' functionalities:
 
 - `ALT-/`: toggle comment — it also works on selected text (*vim-commentary*).

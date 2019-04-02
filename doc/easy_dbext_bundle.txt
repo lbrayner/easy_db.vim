@@ -35,7 +35,12 @@ Bindings exclusive to SQL buffers (|sql.vim|):
 Esc Esc		- Makes the current window the only one on the screen (|:only|).
 F5		- Refreshes (|:e| re-edit) the current file.
 
-Easy mode also sources |$VIMRUNTIME|/mswin.vim, which, among others, provides
+Bindings exclusive to Result buffers:
+
+C		- Clones the buffer (displays the current results in a
+		  separate window at the top).
+
+|easy| mode also sources |$VIMRUNTIME|/mswin.vim, which, among others, provides
 the following binding:
 
 CTRL-S		Saves the file.
