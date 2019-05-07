@@ -2,20 +2,28 @@
 
 " Save any buffer
 
-function! s:SaveAny(name,bang)
+function! Save()
     try
+        set lazyredraw
+
+        let target_bufnr = bufnr('%')
+        browse edit
+        let elected_bufnr = bufnr('%')
+        if elected_bufnr == target_bufnr
+            " user cancelled or some other error
+            return
+        endif
+        let elected_name = expand('%s')
+        exec "b ".target_bufnr
+        exec "bwipeout ".elected_bufnr
+
         let buf_nr = bufnr('%')
         let win_height = winheight(0)
-        set lazyredraw
         keepalt new
         let new_buf_nr = bufnr('%')
         silent put =getbufline(buf_nr,1,'$')
         1d_
-        let write = "w"
-        if a:bang
-            let write = "w!"
-        endif
-        silent exec "confirm write " . fnameescape(a:name)
+        silent exec "confirm write " . fnameescape(elected_name)
         exec bufwinnr(buf_nr)."wincmd w"
         quit
         exec bufwinnr(new_buf_nr)."wincmd w"
@@ -23,19 +31,6 @@ function! s:SaveAny(name,bang)
     finally
         set nolazyredraw
     endtry
-endfunction
-
-function! Save()
-    let target_bufnr = bufnr('%')
-    browse edit
-    let cur_bufnr = bufnr('%')
-    if cur_bufnr == target_bufnr
-        return
-    endif
-    let chosen_file = expand('%s')
-    exec "b ".target_bufnr
-    exec "bwipeout ".cur_bufnr
-    call s:SaveAny(chosen_file,0)
 endfunction
 
 command! -nargs=0 Save call Save()
