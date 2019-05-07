@@ -1,3 +1,45 @@
+" Save As Special
+
+" Save any buffer
+
+function! s:SaveAny(name,bang)
+    try
+        let buf_nr = bufnr('%')
+        let win_height = winheight(0)
+        set lazyredraw
+        keepalt new
+        let new_buf_nr = bufnr('%')
+        silent put =getbufline(buf_nr,1,'$')
+        1d_
+        let write = "w"
+        if a:bang
+            let write = "w!"
+        endif
+        silent exec "confirm write " . fnameescape(a:name)
+        exec bufwinnr(buf_nr)."wincmd w"
+        quit
+        exec bufwinnr(new_buf_nr)."wincmd w"
+        silent exec "resize " . win_height
+    finally
+        set nolazyredraw
+    endtry
+endfunction
+
+function! Save()
+    let target_bufnr = bufnr('%')
+    browse edit
+    let cur_bufnr = bufnr('%')
+    if cur_bufnr == target_bufnr
+        return
+    endif
+    let chosen_file = expand('%s')
+    exec "b ".target_bufnr
+    exec "bwipeout ".cur_bufnr
+    call s:SaveAny(chosen_file,0)
+endfunction
+
+command! -nargs=0 Save call Save()
+
 function! s:LoopBuffers(predicate,command)
 	let last_buffer = bufnr('$')
 	let buffer_count = 0
