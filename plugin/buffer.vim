@@ -63,7 +63,7 @@ endfunction
 
 augroup VimEnterAutoGroup
     au!
-    au VimEnter * call s:BufWipeNotReadableForce('^Result')
+    au VimEnter * call s:BufWipeNotReadableForce('Result')
     au VimEnter * call s:BufWipeFileTypeForce("help")
 augroup END
 
