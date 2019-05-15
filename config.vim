@@ -49,3 +49,8 @@ nnoremap <silent> <F12>  :setlocal list!<CR>
 
 inoremap <silent> <M-/> <c-o>:Commentary<cr>
 snoremap <silent> <M-/> <c-o>:Commentary<cr>
+
+" colorscheme
+
+set background=dark
+colorscheme snow

@@ -13,3 +13,6 @@
 [submodule "pack/bundle/start/vim-commentary"]
 	path = pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "pack/bundle/start/snow"]
+	path = pack/bundle/start/snow
+	url = https://github.com/nightsense/snow
