@@ -48,6 +48,7 @@ Don't forget to `:helptags ALL`. Ignore the errors.
 # Mappings (Insert Mode)
 
 - `CTRL-Enter`: execute SQL (SQL, DML or DDL) in paragraph.
+- `CTRL-Enter` (Select-mode): execute SQL (SQL, DML or DDL) in selection.
 - `SHIFT-Enter`: describe table under cursor.
 - `F1`: show these (and more) mappings (SQL and Result buffers only).
 - `F5`: refresh the file (`:e`) to reload the *dbext* modelines (SQL buffers

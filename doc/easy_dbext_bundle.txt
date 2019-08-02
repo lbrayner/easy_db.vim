@@ -8,6 +8,8 @@ Global bindings:
 
 						*i_<C-RETURN>*
 <C-RETURN>	Executes command (SQL, DML, DDL etc.) in |paragraph|. 
+						*s_<C-RETURN>*
+<C-RETURN>	Executes command (SQL, DML, DDL etc.) in selection (|Select-mode|). 
 						*i_<S-RETURN>*
 <S-RETURN>	Describes table under the cursor.
 						*i_<C-F9>*
