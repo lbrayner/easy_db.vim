@@ -74,6 +74,14 @@ function! s:SQL_SelectParagraph()
     call s:PreserveViewPort(funcref("<SID>Do_SQL_SelectParagraph"))
 endfunction
 
+function! s:Do_SQL_VisualSelection()
+    exe "normal! :\<c-u>call dbext#DB_execSql(DB_getVisualBlock())\<cr>"
+endfunction
+
+function! s:SQL_VisualSelection()
+    call s:PreserveViewPort(funcref("<SID>Do_SQL_VisualSelection"))
+endfunction
+
 " Describe table
 
 function! s:Do_SQL_DescribeTable()
@@ -159,6 +167,8 @@ inoremap <silent> <c-kPlus> <c-o>:res+5<cr>
 
 inoremap <silent> <c-return> <c-o>:call <SID>SQL_SelectParagraph()<cr>
 inoremap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
+
+snoremap <silent> <c-return> <esc><c-o>:call <SID>SQL_VisualSelection()<cr>
 
 inoremap <f8> <c-o>:setlocal wrap! wrap?<CR>
 inoremap <silent> <c-f9> <c-o><c-w>=
