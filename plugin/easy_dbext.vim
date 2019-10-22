@@ -2,10 +2,6 @@ if exists("g:easy_dbext_disable") && g:easy_dbext_disable
     finish
 endif
 
-if !&insertmode || !has("gui_running")
-    finish
-endif
-
 " highlight groups
 
 highlight TrailingSpaces guibg=#ff0000
@@ -174,3 +170,8 @@ inoremap <f8> <c-o>:setlocal wrap! wrap?<CR>
 inoremap <silent> <c-f9> <c-o><c-w>=
 inoremap <silent> <f9> <c-o>:call <SID>ToggleSizeOrOpenResults()<cr>
 inoremap <silent> <f10> <c-o>:call <SID>ResultsClose()<cr>
+
+" Normal Mode Mappings
+
+nnoremap <silent> <leader><return> :call <SID>SQL_SelectParagraph()<cr>
+nnoremap <silent> <F9> :call <SID>ToggleSizeOrOpenResults()<cr>
