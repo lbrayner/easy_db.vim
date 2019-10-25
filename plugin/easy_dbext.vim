@@ -166,7 +166,6 @@ inoremap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
 
 snoremap <silent> <c-return> <esc><c-o>:call <SID>SQL_VisualSelection()<cr>
 
-inoremap <f8> <c-o>:setlocal wrap! wrap?<CR>
 inoremap <silent> <c-f9> <c-o><c-w>=
 inoremap <silent> <f9> <c-o>:call <SID>ToggleSizeOrOpenResults()<cr>
 inoremap <silent> <f10> <c-o>:call <SID>ResultsClose()<cr>

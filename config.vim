@@ -37,9 +37,19 @@ set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %-14.(%l,%c%V%)\ %P
 inoremap <c-k> <c-o>D
 cnoremap <c-k> <c-f>D<c-c><c-c>:<up>
 
-" Toggle insertmode
+" Toggle
+
+"  insertmode
 inoremap <s-f3> <c-o>:set noinsertmode insertmode?<cr>
 nnoremap <c-f3> :set insertmode<cr>
+
+"  highlight search
+inoremap <silent> <f2> <c-o>:set invhlsearch hlsearch?<cr>
+nnoremap <silent> <f2> :set invhlsearch hlsearch?<cr>
+
+"  wrap
+inoremap <f8> <c-o>:setlocal wrap! wrap?<CR>
+nnoremap <f8> :setlocal wrap! wrap?<CR>
 
 " list
 inoremap <silent> <F12>  <c-o>:setlocal list!<CR>
