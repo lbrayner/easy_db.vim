@@ -51,6 +51,8 @@ Don't forget to `:helptags ALL`. Ignore the errors.
 - `CTRL-Enter` (Select-mode): execute SQL (SQL, DML or DDL) in selection.
 - `SHIFT-Enter`: describe table under cursor.
 - `F1`: show these (and more) mappings (SQL and Result buffers only).
+- `F2`: toggle *hlsearch* (when there is a previous search pattern, highlight
+  all its matches).
 - `F5`: refresh the file (`:e`) to reload the *dbext* modelines (SQL buffers
   only).
 - `F8`: toggle *wrap* (when on, lines longer than the width of the window will
@@ -58,6 +60,8 @@ Don't forget to `:helptags ALL`. Ignore the errors.
 - `F9`: open **Result** if in a buffer other than it; toggle its size (*tall* or
   *short*) when in it.
 - `F10`: close the **Result** buffer.
+- `F12`: toggle List mode (useful to see the difference between tabs and spaces
+  and for trailing blanks).
 - `CTRL-NumpadMinus`: resize the window with -5 as parameter.
 - `CTRL-NumpadPlus`: resize the window with +5 as parameter.
 - `CTRL-F9`: equalize all windows.
