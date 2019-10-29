@@ -15,6 +15,9 @@ Global bindings:
 						*i_<C-F9>*
 <C-F9>		Equalizes all windows (|CTRL-W_=|).
 
+						*i_<F2>*
+<F2>		Toggles |'hlsearch'|: when there is a previous search pattern,
+                highlight all its matches.
 						*i_<F8>*
 <F8>		Toggles |'wrap'|: when on, lines longer than the width of the
 		window will wrap and displaying continues on the next line.
