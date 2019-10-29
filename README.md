@@ -11,7 +11,6 @@ It comes with a few plugins bundled. To wit:
 - [snow](https://github.com/nightsense/snow)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)
-- [vim-sensible](https://github.com/tpope/vim-sensible)
 
 The only one that changes the behavior of the editor is
 [delimitMate](https://github.com/Raimondi/delimitMate): it *...provides automatic
