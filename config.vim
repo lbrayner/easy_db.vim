@@ -1,10 +1,40 @@
-set enc=utf-8
-set listchars=eol:¬,tab:»\ ,trail:·
+" Many settings here are taken from tpope's vim-sensible
+" https://github.com/tpope/vim-sensible
+set encoding=utf-8
+filetype plugin indent on
+set nocompatible
+syntax on
 set modeline
 "show existing tab with 4 spaces width
-set tabstop=4
+
+set listchars=eol:¬,tab:»\ ,trail:·
+
+set wildmenu
+
+set ttimeout
 " Time in milliseconds to wait for a key code sequence to complete
 set ttimeoutlen=0
+
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
+set tabstop=4
+
+set incsearch
+
+set autoread
+
+if has("linebreak")
+    set breakindent
+endif
+
+" ruler & statusline
+
+set laststatus=2
+set noruler
+set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %{&fileencoding}
+            \\ %-14.(%l,%c%V%)\ %P\ %L
 
 " setting dir
 
@@ -28,11 +58,15 @@ if !has("nvim")
     let &backupdir=s:bkp_dir."/"
 endif
 
-" ruler & statusline
+" if &synmaxcol == 3000
+"   " Lowering this improves performance in files with long lines.
+"   set synmaxcol=500
+" endif
 
-set noruler
-set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %{&fileencoding}
-            \\ %-14.(%l,%c%V%)\ %P\ %L
+" " Load matchit.vim, but only if the user hasn't installed a newer version.
+" if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+"   runtime! macros/matchit.vim
+" endif
 
 " Mappings
 
