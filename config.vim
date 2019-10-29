@@ -3,6 +3,8 @@ set listchars=eol:¬,tab:»\ ,trail:·
 set modeline
 "show existing tab with 4 spaces width
 set tabstop=4
+" Time in milliseconds to wait for a key code sequence to complete
+set ttimeoutlen=0
 
 " setting dir
 
@@ -29,7 +31,8 @@ endif
 " ruler & statusline
 
 set noruler
-set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %{&fileencoding}
+            \\ %-14.(%l,%c%V%)\ %P\ %L
 
 " Mappings
 
