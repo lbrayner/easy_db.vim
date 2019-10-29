@@ -58,15 +58,15 @@ if !has("nvim")
     let &backupdir=s:bkp_dir."/"
 endif
 
-" if &synmaxcol == 3000
-"   " Lowering this improves performance in files with long lines.
-"   set synmaxcol=500
-" endif
+if &synmaxcol == 3000
+  " Lowering this improves performance in files with long lines.
+  set synmaxcol=500
+endif
 
-" " Load matchit.vim, but only if the user hasn't installed a newer version.
-" if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-"   runtime! macros/matchit.vim
-" endif
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
 
 " Mappings
 
