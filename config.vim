@@ -25,6 +25,8 @@ set incsearch
 
 set autoread
 
+set ignorecase
+
 if has("linebreak")
     set breakindent
 endif
