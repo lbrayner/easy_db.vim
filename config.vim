@@ -35,7 +35,7 @@ endif
 
 set laststatus=2
 set noruler
-set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileformat}\ %{&fileencoding}
+set statusline=%<%f\ %m%=\ %{&ft}\ %r\ %{&fileencoding}\ %{&fileformat}
             \\ %-14.(%l,%c%V%)\ %P\ %L
 
 " setting dir
