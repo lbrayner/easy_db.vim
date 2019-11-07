@@ -60,6 +60,17 @@ if !has("nvim")
     let &backupdir=s:bkp_dir."/"
 endif
 
+" setting undodir
+
+if !has("nvim")
+    let s:undo_dir = g:vim_dir."/undo"
+    exe "let s:has_undo_dir = isdirectory('".s:undo_dir."')"
+    if !s:has_undo_dir
+        call mkdir(s:undo_dir)
+    endif
+    let &undodir=s:undo_dir."/"
+endif
+
 if &synmaxcol == 3000
   " Lowering this improves performance in files with long lines.
   set synmaxcol=500
