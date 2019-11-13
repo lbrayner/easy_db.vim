@@ -27,6 +27,8 @@ set autoread
 
 set ignorecase
 
+set lazyredraw
+
 if has("linebreak")
     set breakindent
 endif
