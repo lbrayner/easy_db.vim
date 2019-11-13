@@ -3,10 +3,12 @@
 " Save any buffer
 
 function! Save()
+    let lazyr = &lazyredraw
     try
         set lazyredraw
-
         let target_bufnr = bufnr('%')
+        let temp_file = tempname()
+        silent exec 'write ' . fnameescape(temp_file)
         browse edit
         let elected_bufnr = bufnr('%')
         if elected_bufnr == target_bufnr
@@ -16,20 +18,19 @@ function! Save()
         let elected_name = expand('%s')
         exec "b ".target_bufnr
         exec "bwipeout ".elected_bufnr
-
         let buf_nr = bufnr('%')
         let win_height = winheight(0)
         keepalt new
         let new_buf_nr = bufnr('%')
-        silent put =getbufline(buf_nr,1,'$')
+        silent exec "read " . fnameescape(temp_file)
         1d_
         silent exec "confirm write " . fnameescape(elected_name)
         exec bufwinnr(buf_nr)."wincmd w"
         quit
         exec bufwinnr(new_buf_nr)."wincmd w"
-        silent exec "resize " . win_height
     finally
-        set nolazyredraw
+        let &lazyredraw = lazyr
+        call delete(temp_file)
     endtry
 endfunction
 
