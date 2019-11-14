@@ -3,8 +3,8 @@
 " Save any buffer
 
 function! Save()
-    let lazyr = &lazyredraw
     try
+        let lazyr = &lazyredraw
         set lazyredraw
         let target_bufnr = bufnr('%')
         let temp_file = tempname()
