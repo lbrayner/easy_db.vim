@@ -8,7 +8,7 @@ It comes with a few plugins bundled. To wit:
 
 - [dbext.vim](https://github.com/lbrayner/dbext.vim)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
-- [snow](https://github.com/nightsense/snow)
+- [vim-afterglow](https://github.com/danilo-augusto/vim-afterglow)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)
 

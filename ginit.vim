@@ -4,5 +4,4 @@ endif
 
 " colorscheme
 
-set background=dark
-colorscheme snow
+colorscheme afterglow
