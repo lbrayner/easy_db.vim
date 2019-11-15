@@ -10,6 +10,6 @@
 [submodule "pack/bundle/start/vim-commentary"]
 	path = pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "pack/bundle/start/snow"]
-	path = pack/bundle/start/snow
-	url = https://github.com/nightsense/snow
+[submodule "pack/bundle/start/vim-afterglow"]
+	path = pack/bundle/start/vim-afterglow
+	url = https://github.com/danilo-augusto/vim-afterglow
