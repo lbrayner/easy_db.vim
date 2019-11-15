@@ -28,6 +28,7 @@ function! Save()
         exec bufwinnr(buf_nr)."wincmd w"
         quit
         exec bufwinnr(new_buf_nr)."wincmd w"
+        silent exec "resize " . win_height
     finally
         let &lazyredraw = lazyr
         call delete(temp_file)
