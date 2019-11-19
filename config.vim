@@ -29,6 +29,8 @@ set ignorecase
 
 set lazyredraw
 
+set shellslash
+
 if has("linebreak")
     set breakindent
 endif
