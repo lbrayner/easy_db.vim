@@ -29,7 +29,9 @@ set ignorecase
 
 set lazyredraw
 
-set shellslash
+if has("win32") || has("win64")
+    set shellslash
+endif
 
 if has("linebreak")
     set breakindent
