@@ -13,3 +13,6 @@
 [submodule "pack/bundle/start/vim-afterglow"]
 	path = pack/bundle/start/vim-afterglow
 	url = https://github.com/danilo-augusto/vim-afterglow
+[submodule "pack/bundle/start/vim-diminactive"]
+	path = pack/bundle/start/vim-diminactive
+	url = https://github.com/blueyed/vim-diminactive
