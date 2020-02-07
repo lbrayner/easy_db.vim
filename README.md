@@ -10,6 +10,7 @@ It comes with a few plugins bundled. To wit:
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [vim-afterglow](https://github.com/danilo-augusto/vim-afterglow)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
+- [vim-diminactive](https://github.com/blueyed/vim-diminactive)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)
 
 The only one that changes the behavior of the editor is
