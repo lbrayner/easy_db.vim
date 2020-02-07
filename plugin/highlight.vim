@@ -1,12 +1,12 @@
-function! s:WhiteSpaceErrorHighlight()
+function! s:Hightlight()
     highlight WhiteSpaceError ctermbg=red ctermfg=white guibg=#ff0000
 endfunction
 
-call s:WhiteSpaceErrorHighlight()
+call s:Hightlight()
 
 " SQL
 
-function! s:HighlightWhiteSpaceError()
+function! s:Match()
     if "sql" ==# &ft
         match WhiteSpaceError /\s\+$/
     endif
@@ -16,8 +16,8 @@ endfunction
 
 augroup HighlightAndMatch
     autocmd!
-    autocmd ColorScheme * call s:WhiteSpaceErrorHighlight()
-    autocmd VimEnter * call s:HighlightWhiteSpaceError()
-    autocmd WinEnter,BufWinEnter sql call s:HighlightWhiteSpaceError()
+    autocmd ColorScheme * call s:Hightlight()
+    autocmd VimEnter * call s:Match()
+    autocmd WinEnter,BufWinEnter * call s:Match()
     autocmd BufWinLeave * call clearmatches()
 augroup END
