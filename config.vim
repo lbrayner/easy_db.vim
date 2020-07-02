@@ -29,6 +29,8 @@ set ignorecase
 
 set lazyredraw
 
+set number
+
 if has("win32") || has("win64")
     set shellslash
 endif
