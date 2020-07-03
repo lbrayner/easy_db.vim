@@ -2,7 +2,7 @@
 
 " Save any buffer
 
-function! Save()
+function! SaveAs()
     try
         let lazyr = &lazyredraw
         set lazyredraw
@@ -16,26 +16,18 @@ function! Save()
             return
         endif
         let elected_name = expand('%s')
-        exec "b ".buf_nr
-        exec "bwipeout ".elected_bufnr
-        let win_height = winheight(0)
-        keepalt new
+        normal! dG
         let new_buf_nr = bufnr('%')
         silent exec "read " . fnameescape(temp_file)
         1d_
         silent exec "confirm write " . fnameescape(elected_name)
-        edit
-        exec bufwinnr(buf_nr)."wincmd w"
-        quit
-        exec bufwinnr(new_buf_nr)."wincmd w"
-        silent exec "resize " . win_height
     finally
         let &lazyredraw = lazyr
         call delete(temp_file)
     endtry
 endfunction
 
-command! -nargs=0 Save call Save()
+command! -nargs=0 SaveAs call SaveAs()
 
 function! s:LoopBuffers(predicate,command)
 	let last_buffer = bufnr('$')

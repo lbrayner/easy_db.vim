@@ -1,7 +1,7 @@
 " Save As Special
 aunmenu File.Save\ As\.\.\.
-amenu 0.350 &File.Save\ &As\.\.\.<Tab>:Save :Save<cr>
-imenu File.Save\ As\.\.\.<Tab>:Save <c-o>:Save<cr>
+amenu 0.350 &File.Save\ &As\.\.\.<Tab>:Save :SaveAs<cr>
+imenu File.Save\ As\.\.\.<Tab>:Save <c-o>:SaveAs<cr>
 
 " Remove all trailing spaces
 
