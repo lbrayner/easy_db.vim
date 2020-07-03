@@ -6,19 +6,18 @@ function! Save()
     try
         let lazyr = &lazyredraw
         set lazyredraw
-        let target_bufnr = bufnr('%')
+        let buf_nr = bufnr('%')
         let temp_file = tempname()
         silent exec 'write ' . fnameescape(temp_file)
         browse edit
         let elected_bufnr = bufnr('%')
-        if elected_bufnr == target_bufnr
+        if elected_bufnr == buf_nr
             " user cancelled or some other error
             return
         endif
         let elected_name = expand('%s')
-        exec "b ".target_bufnr
+        exec "b ".buf_nr
         exec "bwipeout ".elected_bufnr
-        let buf_nr = bufnr('%')
         let win_height = winheight(0)
         keepalt new
         let new_buf_nr = bufnr('%')
