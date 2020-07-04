@@ -81,3 +81,33 @@ function! s:AS_HandleSwapfile (filename, swapname)
 endfunction
 autocmd CursorHold,BufWritePost,BufReadPost,BufLeave *
   \ if isdirectory(expand("<amatch>:h")) | let &swapfile = &modified | endif
+
+" Copy text to the system clipboard
+
+function! FullPath()
+    if has("win32") || has("win64")
+        return expand("%:p")
+    endif
+    return expand("%:p:~")
+endfunction
+
+function! Path()
+    return expand("%")
+endfunction
+
+function! Name()
+    return expand("%:t")
+endfunction
+
+" Copy Path to the Clipboard
+
+command! FullPath call util#clip(FullPath())
+command! Path call util#clip(Path())
+command! Name call util#clip(Name())
+
+if util#has_cygwin()
+    function! FullPathCygwin()
+        return system(util#cygwin_dir() . '/cygpath -ua ' . shellescape(expand('%')))[:-2]
+    endfunction
+    command! FullPathCygwin call util#clip(FullPathCygwin())
+endif

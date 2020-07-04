@@ -109,10 +109,10 @@ Trailing white space is highlighted in red.
 They are:
 
 - Remove trailing spaces, in Edit;
-- Copy full path, in Tools;
-- Copy full path (Cygwin), in Tools;
-- Copy relative path, in Tools;
-- Copy name, in Tools;
+- Copy full path, in Buffer;
+- Copy full path (Cygwin), in Buffer;
+- Copy relative path, in Buffer;
+- Copy name, in Buffer;
 
 # Local configuration
 

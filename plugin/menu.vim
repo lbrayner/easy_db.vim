@@ -10,10 +10,10 @@ amenu .390 Edit.Remove\ &trailing\ spaces<Tab>:RemoveTrailingSpaces
 
 " Copy Full Path to the Clipboard
 
-amenu .50 Tools.Copy\ &full\ path<Tab>:FullPath :FullPath<cr>
+amenu 80.50 B&uffer.Copy\ &full\ path<Tab>:FullPath :FullPath<cr>
 if util#has_cygwin()
-    amenu .55 Tools.Copy\ full\ path\ (C&ygwin)<Tab>:FullPathCygwin :FullPathCygwin<cr>
+    amenu 80.55 Buffer.Copy\ full\ path\ (C&ygwin)<Tab>:FullPathCygwin :FullPathCygwin<cr>
 endif
-amenu .60 Tools.Copy\ &relative\ path<Tab>:Path :Path<cr>
-amenu .70 Tools.Copy\ na&me<Tab>:Name :Name<cr>
-amenu .100 Tools.-Sep-	:
+amenu 80.60 Buffer.Copy\ &relative\ path<Tab>:Path :Path<cr>
+amenu 80.70 Buffer.Copy\ na&me<Tab>:Name :Name<cr>
+amenu 80.100 Buffer.-Sep-	:
