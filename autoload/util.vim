@@ -14,3 +14,16 @@ function! util#PreserveViewPort(command)
         let &lazyredraw = lazyr
     endtry
 endfunction
+
+function! util#cygwin_dir()
+    return 'c:/cygwin64/bin'
+endfunction
+
+function! util#has_cygwin()
+    if has("win32") || has("win64")
+        if isdirectory(util#cygwin_dir())
+            return 1
+        endif
+    endif
+    return 0
+endfunction

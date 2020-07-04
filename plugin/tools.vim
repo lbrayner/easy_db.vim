@@ -36,3 +36,10 @@ endfunction
 command! FullPath call Clip(FullPath())
 command! Path call Clip(Path())
 command! Name call Clip(Name())
+
+if util#has_cygwin()
+    function! FullPathCygwin()
+        return system(util#cygwin_dir() . '/cygpath -ua ' . shellescape(expand('%')))[:-2]
+    endfunction
+    command! FullPathCygwin call Clip(FullPathCygwin())
+endif
