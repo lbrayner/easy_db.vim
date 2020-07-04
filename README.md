@@ -1,4 +1,4 @@
-This is a Vim distribution.
+This is a Vim distribution. It is meant to be used in Easy Mode.
 
 # Requirements
 
@@ -6,7 +6,7 @@ It requires gVim 8.0 or greater (*+packages*).
 
 # Packages
 
-It's bundled with a few plugins. To wit:
+It's bundled with a few plugins as `git` *submodules*. To wit:
 
 - [dbext.vim](https://github.com/lbrayner/dbext.vim)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
@@ -14,6 +14,9 @@ It's bundled with a few plugins. To wit:
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-diminactive](https://github.com/blueyed/vim-diminactive)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)
+
+The main one is **dbext.vim**, which, in the author's own words, *...contains
+functions/mappings/commands to enable Vim to access several databases*. 
 
 The only one that changes the behavior of the editor is
 [delimitMate](https://github.com/Raimondi/delimitMate): it *...provides automatic
