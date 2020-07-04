@@ -1,5 +1,6 @@
 /backup
 /swap
+/sessions
 /config.local.vim
 /pack/local
 /doc/tags

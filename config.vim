@@ -77,6 +77,14 @@ if !has("nvim")
     let &undodir=s:undo_dir."/"
 endif
 
+" creating the sessions dir if it doesn't exist
+
+let s:sessions_dir = g:vim_dir."/sessions"
+exe "let s:has_sessions_dir = isdirectory('".s:sessions_dir."')"
+if !s:has_sessions_dir
+    call mkdir(s:sessions_dir)
+endif
+
 if &synmaxcol == 3000
   " Lowering this improves performance in files with long lines.
   set synmaxcol=500

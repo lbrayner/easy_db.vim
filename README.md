@@ -18,7 +18,7 @@ The only one that changes the behavior of the editor is
 closing of quotes, parenthesis, brackets, etc., besides some other related
 features that should make your time in insert mode a little bit easier...*
 
-# Installation
+# Setup
 
 ```
 $ git clone 'https://github.com/lbrayner/easy_dbext_bundle.vim'
@@ -38,8 +38,27 @@ easy_dbext_bundle.vim$ gvim -y -u init.vim
 
 Make a script of it or a Windows shortcut.
 
+# vim-obsession
+
 If you're setting this up for someone else, don't forget to use tpope's
 [vim-obsession](https://github.com/tpope/vim-obsession.git).
+
+On *easy_dbext_bundle.vim*, run the command `:Obsession` (`C-L` will take you to
+Normal mode) with a filename (e.g. *sessions/session.vim*), which will be the Vim session
+file.
+
+```
+:Obsession sessions/session.vim
+```
+
+(The *sessions* directory is created automatically when you start up
+*easy_dbext_bundle.vim*.)
+
+To resume the session:
+
+```
+easy_dbext_bundle.vim$ gvim -y -S sessions/session.vim -u init.vim
+```
 
 # Helptags
 
