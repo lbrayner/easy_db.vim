@@ -38,6 +38,10 @@ easy_dbext_bundle.vim$ gvim -y -u init.vim
 
 Make a script of it or a Windows shortcut.
 
+# Helptags
+
+On *easy_dbext_bundle.vim*, don't forget to `:helptags ALL`. Ignore the errors.
+
 # vim-obsession
 
 If you're setting this up for someone else, don't forget to use tpope's
@@ -59,10 +63,6 @@ To resume the session:
 ```
 easy_dbext_bundle.vim$ gvim -y -S sessions/session.vim -u init.vim
 ```
-
-# Helptags
-
-Don't forget to `:helptags ALL`. Ignore the errors.
 
 # Mappings (Insert Mode)
 
