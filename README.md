@@ -18,6 +18,15 @@ The only one that changes the behavior of the editor is
 closing of quotes, parenthesis, brackets, etc., besides some other related
 features that should make your time in insert mode a little bit easier...*
 
+# Easy mode
+
+```
+-y    Easy mode.  ...  Starts with 'insertmode' set and behaves like a click-and-type
+      editor. This sources the script $VIMRUNTIME/evim.vim.  Mappings are set up to
+      work like most click-and-type editors, see evim-keys.  The GUI is started when
+      available. {not in Vi}
+```
+
 # Setup
 
 ```
