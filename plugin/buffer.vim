@@ -20,6 +20,10 @@ function! SaveAs()
         let new_buf_nr = bufnr('%')
         silent exec "read " . fnameescape(temp_file)
         1d_
+        " So that we get a confirm dialog if the file exists
+        if filereadable(expand('%'))
+            set readonly
+        endif
         silent exec "confirm write " . fnameescape(elected_name)
     finally
         let &lazyredraw = lazyr
