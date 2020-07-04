@@ -40,16 +40,19 @@ Make a script of it or a Windows shortcut.
 
 # Helptags
 
-On *easy_dbext_bundle.vim*, don't forget to `:helptags ALL`. Ignore the errors.
+On *easy_dbext_bundle.vim*, don't forget to `:helptags ALL` (`C-L` will take you
+to Normal mode) . Ignore the errors.
 
 # vim-obsession
+
+> *Vim features a* `:mksession` *command to write a file containing the current state*
+> *of Vim: window positions, open folds, stuff like that.*
 
 If you're setting this up for someone else, don't forget to use tpope's
 [vim-obsession](https://github.com/tpope/vim-obsession.git).
 
-On *easy_dbext_bundle.vim*, run the command `:Obsession` (`C-L` will take you to
-Normal mode) with a filename (e.g. *sessions/session.vim*), which will be the Vim session
-file.
+On *easy_dbext_bundle.vim*, run the command `:Obsession` with a filename (e.g.
+*sessions/session.vim*), which will be the Vim session file.
 
 ```
 :Obsession sessions/session.vim
