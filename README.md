@@ -100,6 +100,20 @@ Command-line mode:
 
 - `CTRL-K`: same as above.
 
+# Trailing spaces
+
+Trailing white space is highlighted in red.
+
+# Custom menu items
+
+Custom menu items are:
+
+- Remove trailing spaces, in Edit;
+- Copy full path, in Tools;
+- Copy full path (Cygwin), in Tools;
+- Copy relative path, in Tools;
+- Copy name, in Tools;
+
 # Local configuration
 
 Local packages can be installed in `pack/local`; and local configuration should
