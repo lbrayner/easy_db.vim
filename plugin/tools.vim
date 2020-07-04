@@ -16,12 +16,15 @@ function! Clip(...)
     endif
 endfunction
 
-function! Path()
-    return expand("%")
+function! FullPath()
+    if has("win32") || has("win64")
+        return expand("%:p")
+    endif
+    return expand("%:p:~")
 endfunction
 
-function! FullPath()
-    return expand("%:p:~")
+function! Path()
+    return expand("%")
 endfunction
 
 function! Name()
@@ -30,6 +33,6 @@ endfunction
 
 " Copy Path to the Clipboard
 
-command! Path call Clip(Path())
 command! FullPath call Clip(FullPath())
+command! Path call Clip(Path())
 command! Name call Clip(Name())
