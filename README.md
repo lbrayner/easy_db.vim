@@ -4,7 +4,7 @@ It requires gVim 8.0 or greater (*+packages*).
 
 # Packages
 
-It comes with a few plugins bundled. To wit:
+It's bundled with a few plugins. To wit:
 
 - [dbext.vim](https://github.com/lbrayner/dbext.vim)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
