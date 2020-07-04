@@ -106,7 +106,7 @@ Trailing white space is highlighted in red.
 
 # Custom menu items
 
-Custom menu items are:
+They are:
 
 - Remove trailing spaces, in Edit;
 - Copy full path, in Tools;
