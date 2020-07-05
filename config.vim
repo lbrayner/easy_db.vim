@@ -31,6 +31,8 @@ set lazyredraw
 
 set number
 
+set nowrap
+
 if has("win32") || has("win64")
     set shellslash
 endif

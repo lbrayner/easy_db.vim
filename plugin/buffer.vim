@@ -9,7 +9,6 @@ function! SaveAs()
         let buf_nr = bufnr('%')
         let temp_file = tempname()
         silent exec 'write ' . fnameescape(temp_file)
-        let should_set_nowrap = expand('%:t') =~# '^Result-'
         browse edit
         let elected_bufnr = bufnr('%')
         if elected_bufnr == buf_nr
@@ -26,9 +25,6 @@ function! SaveAs()
             set readonly
         endif
         silent exec "confirm write " . fnameescape(elected_name)
-        if should_set_nowrap
-            setlocal nowrap
-        endif
     finally
         let &lazyredraw = lazyr
         call delete(temp_file)
