@@ -57,13 +57,16 @@ Make a script of it or a Windows shortcut.
 
 The best way to configure a connection is on a per file basis, with _dbext_
 modelines. If you're not sure what modelines are, consult the help files
-(`:h modelines`).
+(`:h modelines`). If you've generated help tag file(s), you can also get help
+about _dbext_ modelines (`:h dbext-modelines`).
 
 As an example, the following _dbext_ modeline defines a PostgreSQL connection:
 
 ~~~
 -- dbext:type=PGSQL:user=baka:host=127.0.0.1:extra=--variable=QUIET=off
 ~~~
+
+Place the modeline at the beginning or at the end of the file.
 
 Note that the following parameters are set:
 
@@ -76,12 +79,13 @@ The `extra` parameter is delivered verbatim to the underlying program (in this
 case, `psql`).
 
 `psql` requires an empty `$HOME/.pgpass` file with permissions set to _0600_.
-Beacause of quirks and details such as this, it's recommended trying to setup a
+Beacause of quirks and details such as these, it's recommended trying to setup a
 connection on regular Vim first, so that you can follow the documentation as
 intended.
 
-Please refer to the [dbext.vim](https://github.com/vim-scripts/dbext.vim)
-documentation for instructions on how to connect to a specific solution (Oracle,
+Please refer to the [dbext.vim
+documentation](https://github.com/vim-scripts/dbext.vim/blob/master/doc/dbext.txt)
+for instructions on how to connect to a specific solution (Oracle,
 MySQL, SQL Server, PostgreSQL etc.).
 
 # Mappings (Insert Mode)
