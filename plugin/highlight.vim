@@ -5,13 +5,8 @@ endfunction
 call WhiteSpaceErrorGroup()
 
 function! HighlightWhiteSpaceError()
-    if &syntax =~# '\v(help|netrw)'
+    if &syntax !~# 'sql'
         call ClearWhiteSpaceError()
-        return
-    endif
-    if &syntax =~# '\v(mail|markdown)'
-        call ClearWhiteSpaceError()
-        let w:WhiteSpaceErrorID = matchadd("WhiteSpaceError",'^\s\+$')
         return
     endif
     call ClearWhiteSpaceError()
