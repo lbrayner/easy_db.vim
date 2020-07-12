@@ -41,6 +41,18 @@ $ cd easy_dbext_bundle.vim
 easy_dbext_bundle.vim$ git submodule update --init
 ```
 
+# How to start it
+
+Use `init.vim` as _vimrc_ with the `-u` flag: it will make this repository the
+effective _.vim_ folder, removing the standard locations from the _RUNTIMEPATH_.
+It's meant to be used with __gVim Easy__, so:
+
+```
+easy_dbext_bundle.vim$ gvim -y -u init.vim
+```
+
+Make a script of it or a Windows shortcut.
+
 ## Setting up a connection
 
 The best way to configure a connection is on a per file basis, with _dbext_
@@ -71,18 +83,6 @@ intended.
 Please refer to the [dbext.vim](https://github.com/vim-scripts/dbext.vim)
 documentation for instructions on how to connect to a specific solution (Oracle,
 MySQL, SQL Server, PostgreSQL etc.).
-
-# How to start it
-
-Use `init.vim` as _vimrc_ with the `-u` flag: it will make this repository the
-effective _.vim_ folder, removing the standard locations from the _RUNTIMEPATH_.
-It's meant to be used with __gVim Easy__, so:
-
-```
-easy_dbext_bundle.vim$ gvim -y -u init.vim
-```
-
-Make a script of it or a Windows shortcut.
 
 # Mappings (Insert Mode)
 
