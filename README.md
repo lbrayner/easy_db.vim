@@ -151,7 +151,7 @@ Trailing white space is highlighted in red.
 
 They are:
 
-- Remove trailing spaces, in Edit;
+- Delete trailing whitespace, in Edit;
 - Copy full path, in Buffer;
 - Copy full path (Cygwin), in Buffer;
 - Copy relative path, in Buffer;

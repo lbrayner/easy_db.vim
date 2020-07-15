@@ -1,34 +1,34 @@
-function! WhiteSpaceErrorGroup()
-    highlight WhiteSpaceError ctermbg=red ctermfg=white guibg=#ff0000
+function! TrailingWhiteSpaceGroup()
+    highlight TrailingWhiteSpace ctermbg=red ctermfg=white guibg=#ff0000
 endfunction
 
-call WhiteSpaceErrorGroup()
+call TrailingWhiteSpaceGroup()
 
-function! HighlightWhiteSpaceError()
+function! HighlightTrailingWhiteSpace()
     if &syntax !~# 'sql'
-        call ClearWhiteSpaceError()
+        call ClearTrailingWhiteSpace()
         return
     endif
-    call ClearWhiteSpaceError()
-    let w:WhiteSpaceErrorID = matchadd("WhiteSpaceError",'\s\+$')
+    call ClearTrailingWhiteSpace()
+    let w:TrailingWhiteSpaceID = matchadd("TrailingWhiteSpace",'\s\+$')
 endfunction
 
-function! ClearWhiteSpaceError()
-    if exists("w:WhiteSpaceErrorID")
-        silent! call matchdelete(w:WhiteSpaceErrorID)
-        unlet w:WhiteSpaceErrorID
+function! ClearTrailingWhiteSpace()
+    if exists("w:TrailingWhiteSpaceID")
+        silent! call matchdelete(w:TrailingWhiteSpaceID)
+        unlet w:TrailingWhiteSpaceID
     endif
 endfunction
 
 augroup HighlightAndMatch
     autocmd!
-    autocmd ColorScheme * call WhiteSpaceErrorGroup()
-    autocmd BufWinLeave * call ClearWhiteSpaceError()
+    autocmd ColorScheme * call TrailingWhiteSpaceGroup()
+    autocmd BufWinLeave * call ClearTrailingWhiteSpace()
     " BufWinEnter covers all windows on startup (think of sessions)
-    autocmd BufWinEnter * call HighlightWhiteSpaceError()
+    autocmd BufWinEnter * call HighlightTrailingWhiteSpace()
     " But it becomes insufficient and redundant after that
     autocmd VimEnter * autocmd! HighlightAndMatch BufWinEnter
     autocmd VimEnter * autocmd HighlightAndMatch
-                \ WinEnter,Syntax * call HighlightWhiteSpaceError()
-    autocmd VimEnter * call HighlightWhiteSpaceError()
+                \ WinEnter,Syntax * call HighlightTrailingWhiteSpace()
+    autocmd VimEnter * call HighlightTrailingWhiteSpace()
 augroup END

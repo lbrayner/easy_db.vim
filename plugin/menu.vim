@@ -5,8 +5,8 @@ imenu File.Save\ As\.\.\.<Tab>:SaveAs <c-o>:SaveAs<cr>
 
 " Remove all trailing spaces
 
-amenu .390 Edit.Remove\ &trailing\ spaces<Tab>:RemoveTrailingSpaces
-            \ :RemoveTrailingSpaces<cr>
+amenu .390 Edit.Delte\ &trailing\ whitespace<Tab>:DeleteTrailingWhitespace
+            \ :DeleteTrailingWhitespace<cr>
 
 " Copy Full Path to the Clipboard
 
