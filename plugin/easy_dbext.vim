@@ -1,11 +1,3 @@
-if exists("g:easy_dbext_disable") && g:easy_dbext_disable
-    finish
-endif
-
-" highlight groups
-
-highlight TrailingSpaces guibg=#ff0000
-
 " dbext
 
 " - Whether to use separate result buffers for each file
