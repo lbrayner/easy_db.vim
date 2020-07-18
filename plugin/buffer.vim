@@ -101,13 +101,13 @@ endfunction
 
 " Copy Path to the Clipboard
 
-command! FullPath call util#clip(FullPath())
-command! Path call util#clip(Path())
-command! Name call util#clip(Name())
+command! -nargs=0 FullPath call util#clip(FullPath())
+command! -nargs=0 Path call util#clip(Path())
+command! -nargs=0 Name call util#clip(Name())
 
 if util#has_cygwin()
     function! FullPathCygwin()
         return system(util#cygwin_dir() . '/cygpath -ua ' . shellescape(expand('%')))[:-2]
     endfunction
-    command! FullPathCygwin call util#clip(FullPathCygwin())
+    command! -nargs=0 FullPathCygwin call util#clip(FullPathCygwin())
 endif
