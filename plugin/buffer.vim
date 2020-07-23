@@ -22,7 +22,7 @@ function! SaveAs()
         1d_
         " So that we get a confirm dialog if the file exists
         if filereadable(expand('%'))
-            set readonly
+            setlocal readonly
         endif
         silent exec "confirm write " . fnameescape(elected_name)
     finally
@@ -111,3 +111,32 @@ if util#has_cygwin()
     endfunction
     command! -nargs=0 FullPathCygwin call util#clip(FullPathCygwin())
 endif
+
+" vim-eunuch
+
+function! RenameAs()
+    try
+        let lazyr = &lazyredraw
+        set lazyredraw
+        let buf_nr = bufnr('%')
+        browse edit
+        let elected_name = expand('%s')
+        let elected_bufnr = bufnr('%')
+        if elected_bufnr == buf_nr
+            " user cancelled or some other error
+            return
+        endif
+        " So that we get a confirm dialog if the file exists
+        if filereadable(expand('%'))
+            setlocal readonly
+        endif
+        silent confirm write
+        buffer #
+        exec "bwipeout " . elected_bufnr
+        exec "Move! " . fnameescape(elected_name)
+    finally
+        let &lazyredraw = lazyr
+    endtry
+endfunction
+
+command! -nargs=0 RenameAs call RenameAs()

@@ -15,6 +15,7 @@ It's bundled with a few plugins as `git` _submodules_. To wit:
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-diminactive](https://github.com/blueyed/vim-diminactive)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)
+- [vim-eunuch](https://github.com/tpope/vim-eunuch)
 
 The main one is __dbext.vim__, which, in the author's own words, _...contains
 functions/mappings/commands to enable Vim to access several databases_. 
@@ -151,6 +152,8 @@ Trailing white space is highlighted in red.
 
 They are:
 
+- Save As, in File (replaced);
+- Rename As, in File;
 - Delete trailing whitespace, in Edit;
 - Copy full path, in Buffer;
 - Copy full path (Cygwin), in Buffer;

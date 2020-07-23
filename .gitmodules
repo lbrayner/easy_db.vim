@@ -16,3 +16,6 @@
 [submodule "pack/bundle/start/vim-diminactive"]
 	path = pack/bundle/start/vim-diminactive
 	url = https://github.com/blueyed/vim-diminactive
+[submodule "pack/bundle/start/vim-eunuch"]
+	path = pack/bundle/start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch
