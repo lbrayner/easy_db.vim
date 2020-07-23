@@ -5,3 +5,6 @@ endif
 " colorscheme
 
 colorscheme afterglow
+
+" horizontal scrollbar
+set guioptions+=b
