@@ -2,6 +2,8 @@
 aunmenu File.Save\ As\.\.\.
 amenu 0.350 &File.Save\ &As\.\.\.<Tab>:SaveAs :SaveAs<cr>
 imenu File.Save\ As\.\.\.<Tab>:SaveAs <c-o>:SaveAs<cr>
+" vim-eunuch
+amenu 0.360 &File.&Rename\ As\.\.\.<Tab>:RenameAs :RenameAs<cr>
 
 " Remove all trailing spaces
 
@@ -18,7 +20,5 @@ amenu 80.60 Buffer.Copy\ &relative\ path<Tab>:Path :Path<cr>
 amenu 80.70 Buffer.Copy\ na&me<Tab>:Name :Name<cr>
 amenu 80.100 Buffer.-Sep-	:
 
-" vim-eunuch
-amenu 0.450 &File.&Rename\ As\.\.\.<Tab>:RenameAs :RenameAs<cr>
 
 " Rename or move a file
