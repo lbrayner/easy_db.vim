@@ -23,16 +23,12 @@ set tabstop=4
 set shiftwidth=4
 
 set incsearch
-
 set autoread
-
 set ignorecase
-
 set lazyredraw
-
 set number
-
 set nowrap
+set noshowmode
 
 if has("win32") || has("win64")
     set shellslash
