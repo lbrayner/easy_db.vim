@@ -1,3 +1,5 @@
+![Screenshot](https://user-images.githubusercontent.com/5733531/88462373-41e74500-ce81-11ea-8b99-df13b64cfc8e.PNG)
+
 This is a Vim distribution. It is meant to be used in Easy Mode.
 
 # Requirements
