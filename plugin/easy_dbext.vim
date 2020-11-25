@@ -157,6 +157,7 @@ inoremap <silent> <c-kMinus> <c-o>:res-5<cr>
 inoremap <silent> <c-kPlus> <c-o>:res+5<cr>
 
 inoremap <silent> <c-return> <c-o>:call <SID>SQL_SelectParagraph()<cr>
+inoremap <silent> <c-kEnter> <c-o>:call <SID>SQL_SelectParagraph()<cr>
 inoremap <silent> <S-return> <c-o>:call <SID>SQL_DescribeTable()<cr>
 
 snoremap <silent> <c-return> <esc><c-o>:call <SID>SQL_VisualSelection()<cr>
@@ -168,4 +169,5 @@ inoremap <silent> <f10> <c-o>:call <SID>ResultsClose()<cr>
 " Normal Mode Mappings
 
 nnoremap <silent> <leader><return> :call <SID>SQL_SelectParagraph()<cr>
+nnoremap <silent> <leader><kEnter> :call <SID>SQL_SelectParagraph()<cr>
 nnoremap <silent> <F9> :call <SID>ToggleSizeOrOpenResults()<cr>
