@@ -19,6 +19,3 @@ endif
 amenu 80.60 Buffer.Copy\ &relative\ path<Tab>:Path :Path<cr>
 amenu 80.70 Buffer.Copy\ na&me<Tab>:Name :Name<cr>
 amenu 80.100 Buffer.-Sep-	:
-
-
-" Rename or move a file
