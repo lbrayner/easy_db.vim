@@ -94,6 +94,14 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
 
+" Autcommands
+
+augroup GlobalSettings
+    autocmd!
+    autocmd BufAdd * set iskeyword-=_
+augroup END
+
+
 " Mappings
 
 " emacs c-k behaviour
@@ -122,3 +130,10 @@ nnoremap <silent> <F12>  :setlocal list!<CR>
 
 inoremap <silent> <M-/> <c-o>:Commentary<cr>
 snoremap <silent> <M-/> <c-o>:Commentary<cr>
+
+" select mode
+
+vnoremap <S-Left> b
+vnoremap <S-Right> w
+vnoremap <M-Left> <Left>
+vnoremap <M-Right> <Right>
