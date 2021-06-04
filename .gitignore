@@ -2,6 +2,7 @@
 /swap
 /sessions
 /config.local.vim
+/ginit.local.vim
 /pack/local
 /doc/tags
 /undo
