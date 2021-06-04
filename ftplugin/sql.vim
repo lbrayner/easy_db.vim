@@ -2,7 +2,8 @@
 function! s:define_local_statusline()
     if exists("b:dbext_user")
         let &l:statusline=' %<%t %m%= %{&ft}'
-\.' %{b:dbext_type}:%{b:dbext_user}:%{b:dbext_dbname}@%{Options("b:dbext_host","b:dbext_srvname")}'
+                    \.' %{b:dbext_type}:%{b:dbext_user}:%{b:dbext_dbname}@'
+                    \.'%{Options("b:dbext_host","b:dbext_srvname","localhost")}'
                     \.' %r'
                     \.' %{&fileencoding}'
                     \.' %-10.(%5l,%-3.c%V%) %3.P %L '

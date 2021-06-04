@@ -11,8 +11,11 @@ function! Options(...)
                 endif
             endif
         endfor
-        exec "let value = ".a:000[a:0-1]
-        return value
+        if exists(a:000[a:0-1])
+            exec "let value = ".a:000[a:0-1]
+            return value
+        endif
+        return a:000[a:0-1]
     endif
 endfunction
 
