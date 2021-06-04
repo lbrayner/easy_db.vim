@@ -1,7 +1,7 @@
 " user:dbname@(host|srvname) in the statusline
 function! s:define_local_statusline()
     if exists("b:dbext_user")
-        let &l:statusline=' %<%t %m%= %{&ft}'
+        let &l:statusline=' %<%t %m%= '
                     \.' %{b:dbext_type}:%{b:dbext_user}:%{b:dbext_dbname}@'
                     \.'%{Options("b:dbext_host","b:dbext_srvname","localhost")}'
                     \.' %r'
