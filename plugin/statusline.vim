@@ -1,5 +1,9 @@
 function! Options(...)
     if a:0 == 1
+        if exists(a:1)
+            exec "let value = ".a:1
+            return value
+        endif
         return a:1
     endif
     if a:0 > 1
