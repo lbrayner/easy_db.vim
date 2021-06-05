@@ -44,6 +44,7 @@ set laststatus=2
 set noruler
 set statusline=\ %<%t\ %m%=\ %{&ft}\ %r\ %{&fileencoding}\ %{&fileformat}
             \\ %5l,%-3.c%V\ %3.P\ %L\ 
+
 " setting dir
 
 if !has("nvim")
