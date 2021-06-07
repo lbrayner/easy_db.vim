@@ -1,9 +1,9 @@
-" user:dbname@(host|srvname)[:port] in the statusline
+" user[:dbname]@(host|srvname)[:port] in the statusline
 function! s:define_local_statusline()
     if exists("b:dbext_user")
         let &l:statusline=' %<%t %m%= '
-                    \.' %{b:dbext_type}:%{b:dbext_user}:'
-                    \.'%{util#Options("b:dbext_dbname","b:dbext_user")}@'
+                    \.' %{b:dbext_type}:%{b:dbext_user}'
+                    \.'%{util#statusline_dbext_var("b:dbext_dbname")}@'
                     \.'%{util#Options("b:dbext_host","b:dbext_srvname","localhost")}'
                     \.'%{util#statusline_dbext_var("b:dbext_port")}'
                     \.' %r %{&fileencoding}'
