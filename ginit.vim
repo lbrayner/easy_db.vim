@@ -7,4 +7,5 @@ set guioptions+=b
 
 " colorscheme
 
-colorscheme afterglow
+colorscheme space-vim-dark
+hi Comment cterm=italic

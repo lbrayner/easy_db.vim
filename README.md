@@ -13,7 +13,7 @@ It's bundled with a few plugins as `git` _submodules_. To wit:
 - [dbext.vim](https://github.com/lbrayner/dbext.vim) (a fork with a few bug
   fixes and tweaks)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
-- [vim-afterglow](https://github.com/danilo-augusto/vim-afterglow)
+- [space-vim-dark](https://github.com/liuchengxu/space-vim-dark)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-diminactive](https://github.com/blueyed/vim-diminactive)
 - [vim-obsession](https://github.com/tpope/vim-obsession.git)

@@ -10,12 +10,12 @@
 [submodule "pack/bundle/start/vim-commentary"]
 	path = pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "pack/bundle/start/vim-afterglow"]
-	path = pack/bundle/start/vim-afterglow
-	url = https://github.com/danilo-augusto/vim-afterglow
 [submodule "pack/bundle/start/vim-diminactive"]
 	path = pack/bundle/start/vim-diminactive
 	url = https://github.com/blueyed/vim-diminactive
 [submodule "pack/bundle/start/vim-eunuch"]
 	path = pack/bundle/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
+[submodule "pack/bundle/start/space-vim-dark"]
+	path = pack/bundle/start/space-vim-dark
+	url = https://github.com/liuchengxu/space-vim-dark
