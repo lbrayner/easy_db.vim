@@ -3,6 +3,9 @@
 " - Whether to use separate result buffers for each file
 let g:dbext_default_use_sep_result_buffer = 1
 
+" Don't prompt for parameters
+let g:dbext_default_prompt_for_parameters=0
+
 " If you define a function, DBextPostResult, in your .vimrc (or elsewhere)
 " it will be called automatically each time the Result buffer is updated.
 function! DBextPostResult(db_type, buf_nr)
