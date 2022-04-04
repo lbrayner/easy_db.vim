@@ -86,6 +86,22 @@ Beacause of quirks and details such as these, it's recommended trying to setup a
 connection on regular Vim first, so that you can follow the documentation as
 intended.
 
+`psqlrc` is the configuration file read by `psql`. It will typically
+read both a systemwide `psqlrc` and the per-user one (`~/.psqlrc` on unix-ish
+systems, and `%APPDATA%\postgresql\psqlrc.conf` on Windows). These are some nice
+settings for it:
+
+```sql
+-- ~/.psqlrc
+
+\timing on
+\pset null 'Ø'
+set search_path=public,crm
+\pset border 2
+
+-- vim: ft=sql
+```
+
 Please refer to the [dbext.vim
 documentation](https://github.com/vim-scripts/dbext.vim/blob/master/doc/dbext.txt)
 for instructions on how to connect to a specific solution (Oracle,
