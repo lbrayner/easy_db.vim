@@ -66,7 +66,7 @@ about _dbext_ modelines (`:h dbext-modelines`).
 As an example, the following _dbext_ modeline defines a PostgreSQL connection:
 
 ~~~
--- dbext:type=PGSQL:user=baka:host=127.0.0.1:extra=--variable=QUIET=off
+-- dbext:type=PGSQL:user=baka:host=127.0.0.1:extra=--set=QUIET=off
 ~~~
 
 Place the modeline at the beginning or at the end of the file.
@@ -76,7 +76,7 @@ Note that the following parameters are set:
 - `type=PGSQL`;
 - `user=baka`;
 - `host=127.0.0.1`;
-- `extra=--variable=QUIET=off`.
+- `extra=--set=QUIET=off`.
 
 The `extra` parameter is delivered verbatim to the underlying program (in this
 case, `psql`).
