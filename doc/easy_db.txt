@@ -1,4 +1,4 @@
-*easy_dbext_bundle.txt*
+*easy_db.txt*
 
 <F1>		Closes this window.
 

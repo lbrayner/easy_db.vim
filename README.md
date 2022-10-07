@@ -39,9 +39,9 @@ features that should make your time in insert mode a little bit easier..._
 # Setup
 
 ```
-$ git clone 'https://github.com/lbrayner/easy_dbext_bundle.vim'
-$ cd easy_dbext_bundle.vim
-easy_dbext_bundle.vim$ git submodule update --init
+$ git clone 'https://github.com/lbrayner/easy_db.vim'
+$ cd easy_db.vim
+easy_db.vim$ git submodule update --init
 ```
 
 # How to start it
@@ -51,7 +51,7 @@ effective _.vim_ folder, removing the standard locations from the _RUNTIMEPATH_.
 It's meant to be used with __gVim Easy__, so:
 
 ```
-easy_dbext_bundle.vim$ gvim -y -u init.vim
+easy_db.vim$ gvim -y -u init.vim
 ```
 
 Make a script of it or a Windows shortcut.
@@ -180,7 +180,7 @@ They are:
 
 # Helptags
 
-On _easy_dbext_bundle.vim_, don't forget to `:helptags ALL` (`C-L` will take you
+On *easy_db.vim*, don't forget to `:helptags ALL` (`C-L` will take you
 to Normal mode in Easy Mode). Ignore the errors.
 
 # vim-obsession
@@ -191,7 +191,7 @@ to Normal mode in Easy Mode). Ignore the errors.
 If you're setting this up for someone else, don't forget to use tpope's
 [vim-obsession](https://github.com/tpope/vim-obsession.git).
 
-On _easy_dbext_bundle.vim_, run the command `:Obsession` with a filename (e.g.
+On *easy_db.vim*, run the command `:Obsession` with a filename (e.g.
 _sessions/session.vim_), which will be the Vim session file.
 
 ```
@@ -199,26 +199,26 @@ _sessions/session.vim_), which will be the Vim session file.
 ```
 
 (The _sessions_ directory is created automatically when you start up
-_easy_dbext_bundle.vim_.)
+*easy_db.vim*.)
 
 To resume the session:
 
 ```
-easy_dbext_bundle.vim$ gvim -y -S sessions/session.vim -u init.vim
+easy_db.vim$ gvim -y -S sessions/session.vim -u init.vim
 ```
 
 # Local configuration
 
 Local packages can be installed in `pack/local`; and local configuration should
-reside in `config.local.vim` (both inside the _easy_dbext_bundle.vim_
+reside in `config.local.vim` (both inside the *easy_db.vim*
 directory). For example, suppose you want to install the
 [gruvbox](https://github.com/morhetz/gruvbox) color scheme:
 
 ```
-easy_dbext_bundle.vim$ git clone 'https://github.com/morhetz/gruvbox' pack/local/start/gruvbox
+easy_db.vim$ git clone 'https://github.com/morhetz/gruvbox' pack/local/start/gruvbox
 ```
 
-Then create `config.local.vim` inside _easy_dbext_bundle.vim_ and add
+Then create `config.local.vim` inside *easy_db.vim* and add
 `colorscheme gruvbox` to it.
 
 GUI local configuration should reside in `ginit.local.vim`.
