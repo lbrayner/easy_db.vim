@@ -136,3 +136,12 @@ vnoremap <S-Left> b
 vnoremap <S-Right> w
 vnoremap <M-Left> <Left>
 vnoremap <M-Right> <Right>
+
+" Window size
+" TODO change this mapping
+
+inoremap <silent> <c-kMinus> <c-o>:res-5<cr>
+inoremap <silent> <c-kPlus> <c-o>:res+5<cr>
+
+" Same height & width for all windows
+inoremap <silent> <c-f9> <c-o><c-w>=
